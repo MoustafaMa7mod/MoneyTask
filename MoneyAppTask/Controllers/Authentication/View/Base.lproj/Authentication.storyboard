@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J30-uX-Jlx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,27 +18,96 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX5-Vz-7sx">
-                                <rect key="frame" x="188" y="433" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="107" y="479" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.57647058819999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="878-Re-TY2"/>
+                                    <constraint firstAttribute="width" constant="200" id="UkR-YG-xis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="oAuthLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXn-sg-B68"/>
+                                    <action selector="rigesterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZZ9-9c-NqF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-CQ-5wM">
+                                <rect key="frame" x="107" y="152" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sh1-YJ-TWk"/>
+                                    <constraint firstAttribute="width" constant="200" id="uLD-f7-QFC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.2666666667" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Money is app used for anyone to control his/her budget, accounts, transactions, payees, and setting goal for saving" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-cE-ifd">
+                                <rect key="frame" x="16" y="260" width="382" height="110"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="WHT-00-pBX"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please register to join in our app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2a-Dm-did">
+                                <rect key="frame" x="72.5" y="394" width="269.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.2666666667" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XBe-CQ-5wM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="0GF-o9-iRQ"/>
+                            <constraint firstItem="d3z-cE-ifd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8GF-IM-9eJ"/>
+                            <constraint firstItem="F2a-Dm-did" firstAttribute="centerX" secondItem="d3z-cE-ifd" secondAttribute="centerX" id="Web-sp-rGa"/>
                             <constraint firstItem="NX5-Vz-7sx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZxZ-eQ-FBA"/>
-                            <constraint firstItem="NX5-Vz-7sx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uIL-cq-aBg"/>
+                            <constraint firstItem="XBe-CQ-5wM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="abu-eI-ZQE"/>
+                            <constraint firstItem="F2a-Dm-did" firstAttribute="top" secondItem="d3z-cE-ifd" secondAttribute="bottom" constant="24" id="iUy-bw-jjP"/>
+                            <constraint firstItem="d3z-cE-ifd" firstAttribute="centerX" secondItem="XBe-CQ-5wM" secondAttribute="centerX" id="n8X-BZ-TiT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3z-cE-ifd" secondAttribute="trailing" constant="16" id="sky-eD-3gx"/>
+                            <constraint firstItem="NX5-Vz-7sx" firstAttribute="top" secondItem="F2a-Dm-did" secondAttribute="bottom" constant="64" id="v5U-9Z-sP5"/>
+                            <constraint firstItem="d3z-cE-ifd" firstAttribute="top" secondItem="XBe-CQ-5wM" secondAttribute="bottom" constant="8" id="x7p-Id-jGH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1gj-W8-8wZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="78"/>
+            <point key="canvasLocation" x="1931.8840579710147" y="77.678571428571431"/>
+        </scene>
+        <!--Money App Navigation Controller-->
+        <scene sceneID="sTN-G7-b6e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J30-uX-Jlx" customClass="MoneyAppNavigationController" customModule="MoneyAppTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qID-Rc-gYx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Cav-Z3-LPz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXE-Un-gct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,0 +1,6 @@
+framework module Pods_MoneyAppTask_MoneyAppTaskUITests {
+  umbrella header "Pods-MoneyAppTask-MoneyAppTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

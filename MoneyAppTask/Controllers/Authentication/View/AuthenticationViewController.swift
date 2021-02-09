@@ -9,19 +9,16 @@ import UIKit
 import AuthenticationServices
 
 
-
-
 class AuthenticationViewController: UIViewController {
 
-    fileprivate let clientAuthID = "dba4b95f6bbb9e22efe5e4f412ca98380131a200217c056c88a877768e1d0831"
-    fileprivate let redirectURL = "moneyapptask://oauth"
-    fileprivate let urlScheme = "moneyapptask://"
-
+    // MARK:- variables
     private var authSession: ASWebAuthenticationSession?
+    private var saveData = SaveData.shared
 
+    
     private lazy var authUrl: URL = {
-        let clientId = URLQueryItem(name: "client_id", value: clientAuthID)
-        let redirectURI = URLQueryItem(name: "redirect_uri", value: redirectURL)
+        let clientId = URLQueryItem(name: "client_id", value: Contants.clientAuthID.rawValue)
+        let redirectURI = URLQueryItem(name: "redirect_uri", value: Contants.redirectURL.rawValue)
         let responseType = URLQueryItem(name: "response_type", value: "token")
         
         var urlComponents = URLComponents()
@@ -32,14 +29,25 @@ class AuthenticationViewController: UIViewController {
         
         return urlComponents.url!
     }()
+    // MARK:- main functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Register"
     }
     
+    public init(saveData: SaveData) {
+        self.saveData = saveData
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    public required init?(coder aDecoder: NSCoder) {
+           super.init(coder: aDecoder)
+    }
+    
+    // MARK:- get data login (access token) from YNAB Website
     private func oAuthLogin(completion: @escaping (String?, Error?) -> Void) {
         self.authSession?.cancel()
-        self.authSession = ASWebAuthenticationSession(url: self.authUrl, callbackURLScheme: urlScheme) {
+        self.authSession = ASWebAuthenticationSession(url: self.authUrl, callbackURLScheme: Contants.urlScheme.rawValue) {
             (url: URL?, error: Error?) in
             
             guard let url = url else {
@@ -53,12 +61,11 @@ class AuthenticationViewController: UIViewController {
         }
         if #available(iOS 13.0, *) {
             self.authSession?.presentationContextProvider = self
-        } else {
-            // No need for a presentation context in previous versions of iOS
         }
         self.authSession?.start()
     }
     
+    // MARK:- convert url to access token
     private func accessToken(from url: URL) -> String? {
         guard let fragment = url.fragment else {
             return nil
@@ -78,16 +85,15 @@ class AuthenticationViewController: UIViewController {
         return nil
     }
     
+  
     // MARK - Actions
-    @IBAction func oAuthLoginButtonTapped(_ sender: Any) {
-        oAuthLogin {
-            (oAuthToken: String?, error: Error?) in
+    @IBAction func rigesterButtonTapped(_ sender: Any) {
+        oAuthLogin { [weak self] (oAuthToken: String?, error: Error?) in
             
             if let token = oAuthToken {
-                print("OAuth token received from redirect: \(token)")
+                self?.saveData.saveAccessToken(token)
                 return
             }
-            
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             } else {
@@ -95,8 +101,6 @@ class AuthenticationViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 extension AuthenticationViewController: ASWebAuthenticationPresentationContextProviding {

@@ -3,17 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A9F18C25D3281600272CB8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F18B25D3281600272CB8 /* Constants.swift */; };
+		23A9F19425D32C0500272CB8 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */; };
+		23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1A025D3326900272CB8 /* SaveData.swift */; };
+		23A9F1B925D336B700272CB8 /* SaveDataMockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1B825D336B700272CB8 /* SaveDataMockup.swift */; };
+		23A9F1D325D33D9B00272CB8 /* MoneyAppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1D225D33D9B00272CB8 /* MoneyAppNavigationController.swift */; };
+		23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1D625D33E7100272CB8 /* Colors.swift */; };
+		23A9F1E325D344C700272CB8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1E225D344C700272CB8 /* UIView.swift */; };
 		23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */; };
 		23CFDACB25D2F1FB00387BE9 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDACA25D2F1FB00387BE9 /* AuthenticationViewController.swift */; };
 		23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACC25D2F1FB00387BE9 /* Authentication.storyboard */; };
 		23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */; };
 		23CFDAD325D2F1FD00387BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */; };
-		23CFDADE25D2F1FD00387BE9 /* MoneyAppTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDADD25D2F1FD00387BE9 /* MoneyAppTaskTests.swift */; };
-		23CFDAE925D2F1FD00387BE9 /* MoneyAppTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDAE825D2F1FD00387BE9 /* MoneyAppTaskUITests.swift */; };
+		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
+		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,16 +31,19 @@
 			remoteGlobalIDString = 23CFDAC225D2F1FB00387BE9;
 			remoteInfo = MoneyAppTask;
 		};
-		23CFDAE525D2F1FD00387BE9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23CFDABB25D2F1FB00387BE9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23CFDAC225D2F1FB00387BE9;
-			remoteInfo = MoneyAppTask;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BEB169F19FD3A68DA96967D /* Pods-MoneyAppTask-MoneyAppTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask-MoneyAppTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask-MoneyAppTaskUITests/Pods-MoneyAppTask-MoneyAppTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BABAAACF19BCBE67226D99F /* Pods-MoneyAppTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTaskTests/Pods-MoneyAppTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		23A9F18325D323B200272CB8 /* MoneyAppTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneyAppTask.entitlements; sourceTree = "<group>"; };
+		23A9F18B25D3281600272CB8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		23A9F1A025D3326900272CB8 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		23A9F1B825D336B700272CB8 /* SaveDataMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataMockup.swift; sourceTree = "<group>"; };
+		23A9F1D225D33D9B00272CB8 /* MoneyAppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppNavigationController.swift; sourceTree = "<group>"; };
+		23A9F1D625D33E7100272CB8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		23A9F1E225D344C700272CB8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		23CFDAC325D2F1FB00387BE9 /* MoneyAppTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyAppTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23CFDACA25D2F1FB00387BE9 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -42,11 +52,14 @@
 		23CFDAD225D2F1FD00387BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23CFDAD425D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CFDAD925D2F1FD00387BE9 /* MoneyAppTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyAppTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23CFDADD25D2F1FD00387BE9 /* MoneyAppTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppTaskTests.swift; sourceTree = "<group>"; };
 		23CFDADF25D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23CFDAE425D2F1FD00387BE9 /* MoneyAppTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyAppTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23CFDAE825D2F1FD00387BE9 /* MoneyAppTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAppTaskUITests.swift; sourceTree = "<group>"; };
-		23CFDAEA25D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
+		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
+		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9573712BB2F6BB15BE2DD65E /* Pods-MoneyAppTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTaskTests/Pods-MoneyAppTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC27701A7BD915C9DA12DBAE /* Pods_MoneyAppTask_MoneyAppTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask_MoneyAppTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2A768B3D4E6F1099386B56 /* Pods-MoneyAppTask-MoneyAppTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask-MoneyAppTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask-MoneyAppTaskUITests/Pods-MoneyAppTask-MoneyAppTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,26 +75,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23CFDAE125D2F1FD00387BE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A9F18A25D327FF00272CB8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				23A9F1D625D33E7100272CB8 /* Colors.swift */,
+				23A9F18B25D3281600272CB8 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		23A9F19F25D3325400272CB8 /* Main Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23A9F1A025D3326900272CB8 /* SaveData.swift */,
+				23A9F1D225D33D9B00272CB8 /* MoneyAppNavigationController.swift */,
+			);
+			path = "Main Classes";
+			sourceTree = "<group>";
+		};
+		23A9F1B725D336A700272CB8 /* MockUps */ = {
+			isa = PBXGroup;
+			children = (
+				23A9F1B825D336B700272CB8 /* SaveDataMockup.swift */,
+			);
+			path = MockUps;
+			sourceTree = "<group>";
+		};
 		23CFDABA25D2F1FB00387BE9 = {
 			isa = PBXGroup;
 			children = (
 				23CFDAC525D2F1FB00387BE9 /* MoneyAppTask */,
 				23CFDADC25D2F1FD00387BE9 /* MoneyAppTaskTests */,
-				23CFDAE725D2F1FD00387BE9 /* MoneyAppTaskUITests */,
 				23CFDAC425D2F1FB00387BE9 /* Products */,
+				D10AD707F6EB0BC0EB64DECF /* Pods */,
+				FBA803D06F8D4518D0EA953D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +124,6 @@
 			children = (
 				23CFDAC325D2F1FB00387BE9 /* MoneyAppTask.app */,
 				23CFDAD925D2F1FD00387BE9 /* MoneyAppTaskTests.xctest */,
-				23CFDAE425D2F1FD00387BE9 /* MoneyAppTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +131,7 @@
 		23CFDAC525D2F1FB00387BE9 /* MoneyAppTask */ = {
 			isa = PBXGroup;
 			children = (
+				23A9F18325D323B200272CB8 /* MoneyAppTask.entitlements */,
 				23CFDAFB25D3057C00387BE9 /* Helper */,
 				23CFDAF925D3053200387BE9 /* Controllers */,
 				23CFDAFA25D3055C00387BE9 /* Common */,
@@ -108,19 +143,11 @@
 		23CFDADC25D2F1FD00387BE9 /* MoneyAppTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				23CFDADD25D2F1FD00387BE9 /* MoneyAppTaskTests.swift */,
 				23CFDADF25D2F1FD00387BE9 /* Info.plist */,
+				23A9F1B725D336A700272CB8 /* MockUps */,
+				23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */,
 			);
 			path = MoneyAppTaskTests;
-			sourceTree = "<group>";
-		};
-		23CFDAE725D2F1FD00387BE9 /* MoneyAppTaskUITests */ = {
-			isa = PBXGroup;
-			children = (
-				23CFDAE825D2F1FD00387BE9 /* MoneyAppTaskUITests.swift */,
-				23CFDAEA25D2F1FD00387BE9 /* Info.plist */,
-			);
-			path = MoneyAppTaskUITests;
 			sourceTree = "<group>";
 		};
 		23CFDAF925D3053200387BE9 /* Controllers */ = {
@@ -144,6 +171,8 @@
 		23CFDAFB25D3057C00387BE9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				23A9F19F25D3325400272CB8 /* Main Classes */,
+				23A9F18A25D327FF00272CB8 /* Constants */,
 				23CFDAFC25D3058300387BE9 /* Extensions */,
 			);
 			path = Helper;
@@ -152,6 +181,7 @@
 		23CFDAFC25D3058300387BE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				23A9F1E225D344C700272CB8 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +203,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D10AD707F6EB0BC0EB64DECF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */,
+				64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */,
+				0BEB169F19FD3A68DA96967D /* Pods-MoneyAppTask-MoneyAppTaskUITests.debug.xcconfig */,
+				FD2A768B3D4E6F1099386B56 /* Pods-MoneyAppTask-MoneyAppTaskUITests.release.xcconfig */,
+				9573712BB2F6BB15BE2DD65E /* Pods-MoneyAppTaskTests.debug.xcconfig */,
+				1BABAAACF19BCBE67226D99F /* Pods-MoneyAppTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBA803D06F8D4518D0EA953D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */,
+				AC27701A7BD915C9DA12DBAE /* Pods_MoneyAppTask_MoneyAppTaskUITests.framework */,
+				F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23CFDAED25D2F1FD00387BE9 /* Build configuration list for PBXNativeTarget "MoneyAppTask" */;
 			buildPhases = (
+				5869CAC56B916FBF84DEDC55 /* [CP] Check Pods Manifest.lock */,
 				23CFDABF25D2F1FB00387BE9 /* Sources */,
 				23CFDAC025D2F1FB00387BE9 /* Frameworks */,
 				23CFDAC125D2F1FB00387BE9 /* Resources */,
+				BF6466AE18428A4469828569 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23CFDAF025D2F1FD00387BE9 /* Build configuration list for PBXNativeTarget "MoneyAppTaskTests" */;
 			buildPhases = (
+				0CE7D08E259E44ED5095CE9C /* [CP] Check Pods Manifest.lock */,
 				23CFDAD525D2F1FD00387BE9 /* Sources */,
 				23CFDAD625D2F1FD00387BE9 /* Frameworks */,
 				23CFDAD725D2F1FD00387BE9 /* Resources */,
@@ -211,24 +267,6 @@
 			productReference = 23CFDAD925D2F1FD00387BE9 /* MoneyAppTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		23CFDAE325D2F1FD00387BE9 /* MoneyAppTaskUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23CFDAF325D2F1FD00387BE9 /* Build configuration list for PBXNativeTarget "MoneyAppTaskUITests" */;
-			buildPhases = (
-				23CFDAE025D2F1FD00387BE9 /* Sources */,
-				23CFDAE125D2F1FD00387BE9 /* Frameworks */,
-				23CFDAE225D2F1FD00387BE9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				23CFDAE625D2F1FD00387BE9 /* PBXTargetDependency */,
-			);
-			name = MoneyAppTaskUITests;
-			productName = MoneyAppTaskUITests;
-			productReference = 23CFDAE425D2F1FD00387BE9 /* MoneyAppTaskUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,10 +280,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					23CFDAD825D2F1FD00387BE9 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 23CFDAC225D2F1FB00387BE9;
-					};
-					23CFDAE325D2F1FD00387BE9 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 23CFDAC225D2F1FB00387BE9;
 					};
@@ -266,7 +300,6 @@
 			targets = (
 				23CFDAC225D2F1FB00387BE9 /* MoneyAppTask */,
 				23CFDAD825D2F1FD00387BE9 /* MoneyAppTaskTests */,
-				23CFDAE325D2F1FD00387BE9 /* MoneyAppTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,14 +322,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23CFDAE225D2F1FD00387BE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CE7D08E259E44ED5095CE9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyAppTaskTests-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		5869CAC56B916FBF84DEDC55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyAppTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF6466AE18428A4469828569 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23CFDABF25D2F1FB00387BE9 /* Sources */ = {
@@ -304,7 +394,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CFDACB25D2F1FB00387BE9 /* AuthenticationViewController.swift in Sources */,
+				23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */,
 				23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */,
+				23A9F1E325D344C700272CB8 /* UIView.swift in Sources */,
+				23A9F1D325D33D9B00272CB8 /* MoneyAppNavigationController.swift in Sources */,
+				23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */,
+				23A9F18C25D3281600272CB8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,15 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23CFDADE25D2F1FD00387BE9 /* MoneyAppTaskTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23CFDAE025D2F1FD00387BE9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23CFDAE925D2F1FD00387BE9 /* MoneyAppTaskUITests.swift in Sources */,
+				23A9F19425D32C0500272CB8 /* AuthenticationTests.swift in Sources */,
+				23A9F1B925D336B700272CB8 /* SaveDataMockup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,11 +419,6 @@
 			isa = PBXTargetDependency;
 			target = 23CFDAC225D2F1FB00387BE9 /* MoneyAppTask */;
 			targetProxy = 23CFDADA25D2F1FD00387BE9 /* PBXContainerItemProxy */;
-		};
-		23CFDAE625D2F1FD00387BE9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23CFDAC225D2F1FB00387BE9 /* MoneyAppTask */;
-			targetProxy = 23CFDAE525D2F1FD00387BE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -477,9 +560,11 @@
 		};
 		23CFDAEE25D2F1FD00387BE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneyAppTask/MoneyAppTask.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
 				INFOPLIST_FILE = MoneyAppTask/Info.plist;
@@ -497,9 +582,11 @@
 		};
 		23CFDAEF25D2F1FD00387BE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MoneyAppTask/MoneyAppTask.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
 				INFOPLIST_FILE = MoneyAppTask/Info.plist;
@@ -517,6 +604,7 @@
 		};
 		23CFDAF125D2F1FD00387BE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9573712BB2F6BB15BE2DD65E /* Pods-MoneyAppTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +627,7 @@
 		};
 		23CFDAF225D2F1FD00387BE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BABAAACF19BCBE67226D99F /* Pods-MoneyAppTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -556,46 +645,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyAppTask.app/MoneyAppTask";
-			};
-			name = Release;
-		};
-		23CFDAF425D2F1FD00387BE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VQU76VH8CY;
-				INFOPLIST_FILE = MoneyAppTaskUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nowpay.MoneyAppTaskUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoneyAppTask;
-			};
-			name = Debug;
-		};
-		23CFDAF525D2F1FD00387BE9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VQU76VH8CY;
-				INFOPLIST_FILE = MoneyAppTaskUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Nowpay.MoneyAppTaskUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MoneyAppTask;
 			};
 			name = Release;
 		};
@@ -625,15 +674,6 @@
 			buildConfigurations = (
 				23CFDAF125D2F1FD00387BE9 /* Debug */,
 				23CFDAF225D2F1FD00387BE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		23CFDAF325D2F1FD00387BE9 /* Build configuration list for PBXNativeTarget "MoneyAppTaskUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23CFDAF425D2F1FD00387BE9 /* Debug */,
-				23CFDAF525D2F1FD00387BE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

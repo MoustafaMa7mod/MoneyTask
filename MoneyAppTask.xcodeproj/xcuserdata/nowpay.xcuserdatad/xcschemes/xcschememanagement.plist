@@ -7,7 +7,20 @@
 		<key>MoneyAppTask.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>23CFDAC225D2F1FB00387BE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>23CFDAD825D2F1FD00387BE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

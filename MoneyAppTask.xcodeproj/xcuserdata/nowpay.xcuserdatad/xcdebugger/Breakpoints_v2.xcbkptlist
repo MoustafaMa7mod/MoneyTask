@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "930F40AB-8A57-416D-8D54-654EB8BFA138"
+            uuid = "4E439B48-DE8A-4D3A-8CF2-5FCA08B0A1CF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoneyAppTask/Controllers/Authentication/View/AuthenticationViewController.swift"
+            filePath = "MoneyAppTask/Controllers/Authentication/View Model/AuthenticationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "oAuthLoginButtonTapped(_:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "oAuthLogin(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B80F794F-5DF7-479E-B5BD-C2AD33DD3CE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyAppTask/Controllers/Authentication/View Model/AuthenticationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "oAuthLogin(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
