@@ -11,11 +11,11 @@ import Foundation
 class SaveDataMockup: SaveData {
     
     override func saveAccessToken(_ token: String) {
-        keychain.set(token, forKey: "token")
+        keyChain.set(token, forKey: "token")
     }
     
     override func getAccessToken() -> String {
-        guard let token = keychain.get("token") else {
+        guard let token = keyChain.get("token") else {
             return "faild to get access token"
         }
         

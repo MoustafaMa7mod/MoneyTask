@@ -11,14 +11,16 @@ import KeychainSwift
 class SaveData: NSObject {
     
     static let shared = SaveData()
-    let keychain = KeychainSwift()
+    let keyChain = KeychainSwift()
     
     func saveAccessToken(_ token: String){
-        keychain.set(token, forKey: "token")
+        keyChain.synchronizable = true
+        keyChain.set(token, forKey: "token")
     }
     
     func getAccessToken() -> String{
-        guard let token = keychain.get("token") else {
+        keyChain.synchronizable = true
+        guard let token = keyChain.get("token") else {
             return "faild to get access token"
         }
         
