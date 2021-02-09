@@ -2,7 +2,7 @@
 //  MoneyAppTaskUITests.swift
 //  MoneyAppTaskUITests
 //
-//  Created by NowPay on 2/9/21.
+//  Created by Mostafa Mahmoud on 2/9/21.
 //
 
 import XCTest
