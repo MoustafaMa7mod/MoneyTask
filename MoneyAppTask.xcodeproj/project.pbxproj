@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */; };
-		23CFDAC925D2F1FB00387BE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDAC825D2F1FB00387BE9 /* SceneDelegate.swift */; };
-		23CFDACB25D2F1FB00387BE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDACA25D2F1FB00387BE9 /* ViewController.swift */; };
-		23CFDACE25D2F1FB00387BE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACC25D2F1FB00387BE9 /* Main.storyboard */; };
+		23CFDACB25D2F1FB00387BE9 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDACA25D2F1FB00387BE9 /* AuthenticationViewController.swift */; };
+		23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACC25D2F1FB00387BE9 /* Authentication.storyboard */; };
 		23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */; };
 		23CFDAD325D2F1FD00387BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */; };
 		23CFDADE25D2F1FD00387BE9 /* MoneyAppTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CFDADD25D2F1FD00387BE9 /* MoneyAppTaskTests.swift */; };
@@ -37,9 +36,8 @@
 /* Begin PBXFileReference section */
 		23CFDAC325D2F1FB00387BE9 /* MoneyAppTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyAppTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23CFDAC825D2F1FB00387BE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23CFDACA25D2F1FB00387BE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23CFDACD25D2F1FB00387BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23CFDACA25D2F1FB00387BE9 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		23CFDACD25D2F1FB00387BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23CFDAD225D2F1FD00387BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23CFDAD425D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,12 +97,9 @@
 		23CFDAC525D2F1FB00387BE9 /* MoneyAppTask */ = {
 			isa = PBXGroup;
 			children = (
-				23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */,
-				23CFDAC825D2F1FB00387BE9 /* SceneDelegate.swift */,
-				23CFDACA25D2F1FB00387BE9 /* ViewController.swift */,
-				23CFDACC25D2F1FB00387BE9 /* Main.storyboard */,
-				23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */,
-				23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */,
+				23CFDAFB25D3057C00387BE9 /* Helper */,
+				23CFDAF925D3053200387BE9 /* Controllers */,
+				23CFDAFA25D3055C00387BE9 /* Common */,
 				23CFDAD425D2F1FD00387BE9 /* Info.plist */,
 			);
 			path = MoneyAppTask;
@@ -126,6 +121,56 @@
 				23CFDAEA25D2F1FD00387BE9 /* Info.plist */,
 			);
 			path = MoneyAppTaskUITests;
+			sourceTree = "<group>";
+		};
+		23CFDAF925D3053200387BE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23CFDAFD25D305A800387BE9 /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23CFDAFA25D3055C00387BE9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23CFDAC625D2F1FB00387BE9 /* AppDelegate.swift */,
+				23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */,
+				23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23CFDAFB25D3057C00387BE9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				23CFDAFC25D3058300387BE9 /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		23CFDAFC25D3058300387BE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23CFDAFD25D305A800387BE9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				23CFDAFE25D305CB00387BE9 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		23CFDAFE25D305CB00387BE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23CFDACA25D2F1FB00387BE9 /* AuthenticationViewController.swift */,
+				23CFDACC25D2F1FB00387BE9 /* Authentication.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +278,7 @@
 			files = (
 				23CFDAD325D2F1FD00387BE9 /* LaunchScreen.storyboard in Resources */,
 				23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */,
-				23CFDACE25D2F1FB00387BE9 /* Main.storyboard in Resources */,
+				23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23CFDACB25D2F1FB00387BE9 /* ViewController.swift in Sources */,
+				23CFDACB25D2F1FB00387BE9 /* AuthenticationViewController.swift in Sources */,
 				23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */,
-				23CFDAC925D2F1FB00387BE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +340,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		23CFDACC25D2F1FB00387BE9 /* Main.storyboard */ = {
+		23CFDACC25D2F1FB00387BE9 /* Authentication.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				23CFDACD25D2F1FB00387BE9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Authentication.storyboard;
 			sourceTree = "<group>";
 		};
 		23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */ = {
@@ -366,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
 				INFOPLIST_FILE = MoneyAppTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQU76VH8CY;
 				INFOPLIST_FILE = MoneyAppTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
