@@ -10,7 +10,7 @@ import UIKit
 class BudgetsViewController: UIViewController {
 
     // MARK:- outlets
-    @IBOutlet weak var badgetTableView: UITableView!
+    @IBOutlet weak var budgetTableView: UITableView!
     // MARK:- varaibles
     var budgetsViewModel =  BudgetsViewModel()
     
@@ -33,17 +33,17 @@ class BudgetsViewController: UIViewController {
     }
     
     private func setupTableView(){
-        badgetTableView.registerCellNib(cellClass: BudgetCell.self)
-        badgetTableView.delegate = self
-        badgetTableView.dataSource = self
-        badgetTableView.tableFooterView = UIView()
+        budgetTableView.registerCellNib(cellClass: BudgetCell.self)
+        budgetTableView.delegate = self
+        budgetTableView.dataSource = self
+        budgetTableView.tableFooterView = UIView()
     }
     
     private func getData(){
         budgetsViewModel.getData(completion: { loadData ,message in
             if loadData {
                 DispatchQueue.main.async {
-                    self.badgetTableView.reloadData()
+                    self.budgetTableView.reloadData()
                 }
             }else{
                 print(message ?? "")
@@ -62,7 +62,7 @@ extension BudgetsViewController: UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = badgetTableView.dequeue() as BudgetCell
+        let cell = budgetTableView.dequeue() as BudgetCell
         let budget = budgetsViewModel.getDetailsOfEachBudget(indexPath.row)
         cell.configCell(budget)
         

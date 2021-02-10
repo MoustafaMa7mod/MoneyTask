@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="badgetTableView" destination="z3B-0S-CWF" id="FZU-nT-l8O"/>
+                        <outlet property="budgetTableView" destination="z3B-0S-CWF" id="ZKq-g1-eTG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jj-ko-pCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
