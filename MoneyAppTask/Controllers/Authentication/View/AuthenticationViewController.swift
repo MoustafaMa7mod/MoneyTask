@@ -92,6 +92,7 @@ class AuthenticationViewController: UIViewController {
             
             if let token = oAuthToken {
                 self?.saveData.saveAccessToken(token)
+                self?.gotobudgetsPage()
                 return
             }
             if let error = error {
@@ -100,6 +101,15 @@ class AuthenticationViewController: UIViewController {
                 print("Unknown error")
             }
         }
+    }
+    
+    private func gotobudgetsPage() {
+        let budgetsViewController = BudgetsViewController.instantiateViewController()
+        budgetsViewController.modalPresentationStyle = .fullScreen
+        budgetsViewController.modalTransitionStyle = .crossDissolve
+        let nav = MoneyAppNavigationController(rootViewController: budgetsViewController)
+        UIApplication.shared.keyWindow?.rootViewController = nav
+
     }
 }
 
