@@ -17,6 +17,7 @@ class BudgetsViewController: UIViewController {
     // MARK:- main functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        print( "Token: ",SaveData.shared.getAccessToken())
         setupNavBar()
         setupTableView()
         getData()
@@ -67,6 +68,10 @@ extension BudgetsViewController: UITableViewDataSource , UITableViewDelegate{
         cell.configCell(budget)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
     
     

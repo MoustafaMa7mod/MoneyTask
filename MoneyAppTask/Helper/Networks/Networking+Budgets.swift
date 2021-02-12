@@ -10,6 +10,7 @@ import Foundation
 
 extension Networking {
     func getAllBudgets(completion: @escaping(BudgetsModel?, String?) -> Void) {
+        
         request = Request(accessToken: accessToken, method: .get, body: nil)
         request?.request(URL(string: URLS.getBudgets)!, completion: { data, errorMessage in
             guard errorMessage == nil else{

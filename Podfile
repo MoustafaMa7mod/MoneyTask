@@ -7,13 +7,11 @@ target 'MoneyAppTask' do
 
   # Pods for MoneyAppTask
   pod 'KeychainSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'MoneyAppTaskTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'MoneyAppTaskUITests' do
     # Pods for testing
   end
 
