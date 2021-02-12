@@ -10,6 +10,15 @@
 		23420D7D25D444C200736F21 /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420D7C25D444C200736F21 /* URLS.swift */; };
 		23420D8125D4461600736F21 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420D8025D4461600736F21 /* Networking.swift */; };
 		23420D8525D4523C00736F21 /* Networking+Budgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420D8425D4523C00736F21 /* Networking+Budgets.swift */; };
+		23420DCF25D6CBB300736F21 /* Networking+Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DCE25D6CBB300736F21 /* Networking+Accounts.swift */; };
+		23420DD725D6CD0A00736F21 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23420DD625D6CD0A00736F21 /* Accounts.storyboard */; };
+		23420DDB25D6CD2400736F21 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DDA25D6CD2400736F21 /* AccountsViewController.swift */; };
+		23420DDF25D6CE5200736F21 /* AccountsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DDE25D6CE5200736F21 /* AccountsVC+TableView.swift */; };
+		23420DE525D6CE8100736F21 /* BudgetsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DE425D6CE8100736F21 /* BudgetsVC+TableView.swift */; };
+		23420DEB25D6D27100736F21 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DEA25D6D27100736F21 /* AccountModel.swift */; };
+		23420DEF25D6D65F00736F21 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DEE25D6D65F00736F21 /* AccountsViewModel.swift */; };
+		23420DF525D6E39E00736F21 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23420DF325D6E39E00736F21 /* AccountCell.swift */; };
+		23420DF625D6E39E00736F21 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23420DF425D6E39E00736F21 /* AccountCell.xib */; };
 		23A9F18C25D3281600272CB8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F18B25D3281600272CB8 /* Constants.swift */; };
 		23A9F19425D32C0500272CB8 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */; };
 		23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A9F1A025D3326900272CB8 /* SaveData.swift */; };
@@ -50,6 +59,15 @@
 		23420D7C25D444C200736F21 /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 		23420D8025D4461600736F21 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		23420D8425D4523C00736F21 /* Networking+Budgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+Budgets.swift"; sourceTree = "<group>"; };
+		23420DCE25D6CBB300736F21 /* Networking+Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+Accounts.swift"; sourceTree = "<group>"; };
+		23420DD625D6CD0A00736F21 /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		23420DDA25D6CD2400736F21 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		23420DDE25D6CE5200736F21 /* AccountsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountsVC+TableView.swift"; sourceTree = "<group>"; };
+		23420DE425D6CE8100736F21 /* BudgetsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetsVC+TableView.swift"; sourceTree = "<group>"; };
+		23420DEA25D6D27100736F21 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		23420DEE25D6D65F00736F21 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		23420DF325D6E39E00736F21 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		23420DF425D6E39E00736F21 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		23A9F18325D323B200272CB8 /* MoneyAppTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneyAppTask.entitlements; sourceTree = "<group>"; };
 		23A9F18B25D3281600272CB8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
@@ -109,8 +127,55 @@
 			children = (
 				23420D8025D4461600736F21 /* Networking.swift */,
 				23420D8425D4523C00736F21 /* Networking+Budgets.swift */,
+				23420DCE25D6CBB300736F21 /* Networking+Accounts.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		23420DD225D6CC8900736F21 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				23420DD525D6CCA100736F21 /* View */,
+				23420DD425D6CC9900736F21 /* Model */,
+				23420DD325D6CC9000736F21 /* View Model */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		23420DD325D6CC9000736F21 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				23420DEE25D6D65F00736F21 /* AccountsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		23420DD425D6CC9900736F21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23420DEA25D6D27100736F21 /* AccountModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23420DD525D6CCA100736F21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23420DF225D6E38100736F21 /* Cell */,
+				23420DD625D6CD0A00736F21 /* Accounts.storyboard */,
+				23420DDA25D6CD2400736F21 /* AccountsViewController.swift */,
+				23420DDE25D6CE5200736F21 /* AccountsVC+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23420DF225D6E38100736F21 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23420DF325D6E39E00736F21 /* AccountCell.swift */,
+				23420DF425D6E39E00736F21 /* AccountCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		23A9F18A25D327FF00272CB8 /* Constants */ = {
@@ -156,6 +221,7 @@
 				23B2351D25D40240000B983F /* Cell */,
 				23B2351525D3FF8D000B983F /* Budgets.storyboard */,
 				23B2351925D3FFD7000B983F /* BudgetsViewController.swift */,
+				23420DE425D6CE8100736F21 /* BudgetsVC+TableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +304,7 @@
 		23CFDAF925D3053200387BE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				23420DD225D6CC8900736F21 /* Accounts */,
 				23B2351125D3FF5C000B983F /* Budgets */,
 				23CFDAFD25D305A800387BE9 /* Authentication */,
 			);
@@ -400,7 +467,9 @@
 			files = (
 				23CFDAD325D2F1FD00387BE9 /* LaunchScreen.storyboard in Resources */,
 				23B2352125D40290000B983F /* BudgetCell.xib in Resources */,
+				23420DD725D6CD0A00736F21 /* Accounts.storyboard in Resources */,
 				23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */,
+				23420DF625D6E39E00736F21 /* AccountCell.xib in Resources */,
 				23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */,
 				23B2351625D3FF8D000B983F /* Budgets.storyboard in Resources */,
 			);
@@ -488,17 +557,24 @@
 				23420D7D25D444C200736F21 /* URLS.swift in Sources */,
 				23B2353425D413DA000B983F /* Request.swift in Sources */,
 				23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */,
+				23420DEF25D6D65F00736F21 /* AccountsViewModel.swift in Sources */,
 				23420D8525D4523C00736F21 /* Networking+Budgets.swift in Sources */,
+				23420DE525D6CE8100736F21 /* BudgetsVC+TableView.swift in Sources */,
 				23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */,
 				23B2352F25D40EDC000B983F /* BudgetsViewModel.swift in Sources */,
 				23420D8125D4461600736F21 /* Networking.swift in Sources */,
 				23B2351A25D3FFD7000B983F /* BudgetsViewController.swift in Sources */,
 				23A9F1E325D344C700272CB8 /* UIView.swift in Sources */,
 				23B2352725D40B08000B983F /* UITableView+Extensions.swift in Sources */,
+				23420DCF25D6CBB300736F21 /* Networking+Accounts.swift in Sources */,
 				23A9F1D325D33D9B00272CB8 /* MoneyAppNavigationController.swift in Sources */,
 				23B2352B25D40BB3000B983F /* BudgetModel.swift in Sources */,
 				23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */,
+				23420DF525D6E39E00736F21 /* AccountCell.swift in Sources */,
+				23420DEB25D6D27100736F21 /* AccountModel.swift in Sources */,
 				23B2352025D40290000B983F /* BudgetCell.swift in Sources */,
+				23420DDB25D6CD2400736F21 /* AccountsViewController.swift in Sources */,
+				23420DDF25D6CE5200736F21 /* AccountsVC+TableView.swift in Sources */,
 				23A9F18C25D3281600272CB8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

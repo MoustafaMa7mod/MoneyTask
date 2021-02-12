@@ -19,14 +19,14 @@ class MoneyAppNavigationController: UINavigationController {
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white , .font: UIFont.systemFont(ofSize: 34.0)]
             navBarAppearance.backgroundColor = Colors.mainColor
             navBarAppearance.shadowColor = .white
-            UINavigationBar.appearance().tintColor = Colors.mainColor
+            UINavigationBar.appearance().tintColor = .white
             self.navigationBar.standardAppearance = navBarAppearance
             self.navigationBar.scrollEdgeAppearance = navBarAppearance
         }else{
             self.view.backgroundColor = Colors.mainColor
             self.navigationBar.backgroundColor = Colors.mainColor
             self.navigationBar.barTintColor = Colors.mainColor
-            self.navigationBar.tintColor = .black
+            self.navigationBar.tintColor = .white
             let paragraph = NSMutableParagraphStyle()
             self.navigationBar.titleTextAttributes = [NSAttributedString.Key.paragraphStyle :paragraph ,NSAttributedString.Key.foregroundColor: UIColor.white , NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0)]
             self.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor.white

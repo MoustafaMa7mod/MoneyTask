@@ -27,12 +27,15 @@ class BudgetsViewController: UIViewController {
     class func instantiateViewController() -> BudgetsViewController  {
         return UIStoryboard(name: "Budgets", bundle: nil).instantiateViewController(withIdentifier:  String(describing: BudgetsViewController.self)) as! BudgetsViewController
     }
+    
+    // MARK:- setup setting of navigation controller
     private func setupNavBar(){
         title = "Budgets"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
     }
     
+    // MARK:- setup setting of table view
     private func setupTableView(){
         budgetTableView.registerCellNib(cellClass: BudgetCell.self)
         budgetTableView.delegate = self
@@ -40,39 +43,16 @@ class BudgetsViewController: UIViewController {
         budgetTableView.tableFooterView = UIView()
     }
     
+    // MARK:- get data from server
     private func getData(){
-        budgetsViewModel.getData(completion: { loadData ,message in
+        budgetsViewModel.getData(completion: { [weak self] loadData ,message in
             if loadData {
                 DispatchQueue.main.async {
-                    self.budgetTableView.reloadData()
+                    self?.budgetTableView.reloadData()
                 }
             }else{
                 print(message ?? "")
             }
         })
     }
-}
-
-extension BudgetsViewController: UITableViewDataSource , UITableViewDelegate{
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return budgetsViewModel.getBudgetCount()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = budgetTableView.dequeue() as BudgetCell
-        let budget = budgetsViewModel.getDetailsOfEachBudget(indexPath.row)
-        cell.configCell(budget)
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
-    }
-    
-    
 }

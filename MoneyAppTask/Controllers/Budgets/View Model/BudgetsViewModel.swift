@@ -37,7 +37,4 @@ class BudgetsViewModel: NSObject {
         
         return object
     }
-    
-    
-    
 }

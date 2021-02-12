@@ -25,8 +25,7 @@ struct BudgetObject : Codable {
     var currencyFormat: CurrencyFormat?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case name
+        case id, name
         case firstMonth = "first_month"
         case lastMonth = "last_month"
         case dateFormat = "date_format"

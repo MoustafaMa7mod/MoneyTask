@@ -36,7 +36,6 @@ class Request: NSObject {
     private func configURLRequest(_ url: URL) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = self.method?.rawValue
-        
         if self.method?.rawValue == "POST" || self.method?.rawValue == "PUT"  {
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = self.body
