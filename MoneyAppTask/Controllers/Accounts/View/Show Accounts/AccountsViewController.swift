@@ -35,13 +35,22 @@ class AccountsViewController: UIViewController {
     
     // MARK:- setup setting of navigation controller
     private func setupNavBar(){
-        title = "Acccounts"
+        title = "Accounts"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(gotoAddAccount))
+        navigationItem.rightBarButtonItem = add
+
     }
     
-    // MARK:- setup setting of table view
+    // MARK: - actions
+    @objc func gotoAddAccount(){
+        let addAccountViewController = AddAccountViewController.instantiateViewController()
+        let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
+        self.present(nav , animated: true)
+    }
 
+    // MARK:- setup setting of table view
     private func setupTableView(){
         accountsTableView.registerCellNib(cellClass: AccountCell.self)
         accountsTableView.delegate = self

@@ -39,6 +39,9 @@
 		23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACC25D2F1FB00387BE9 /* Authentication.storyboard */; };
 		23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDACF25D2F1FD00387BE9 /* Assets.xcassets */; };
 		23CFDAD325D2F1FD00387BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CFDAD125D2F1FD00387BE9 /* LaunchScreen.storyboard */; };
+		23FCDEB825D6FFC40055BF89 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEB725D6FFC40055BF89 /* AddAccountViewController.swift */; };
+		23FCDEBC25D70B500055BF89 /* AddAccountVC+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEBB25D70B500055BF89 /* AddAccountVC+PickerView.swift */; };
+		23FCDEC025D70BA80055BF89 /* AddAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEBF25D70BA80055BF89 /* AddAccountViewModel.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +96,9 @@
 		23CFDAD425D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CFDAD925D2F1FD00387BE9 /* MoneyAppTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyAppTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CFDADF25D2F1FD00387BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FCDEB725D6FFC40055BF89 /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		23FCDEBB25D70B500055BF89 /* AddAccountVC+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAccountVC+PickerView.swift"; sourceTree = "<group>"; };
+		23FCDEBF25D70BA80055BF89 /* AddAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewModel.swift; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				23420DEE25D6D65F00736F21 /* AccountsViewModel.swift */,
+				23FCDEBF25D70BA80055BF89 /* AddAccountViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -163,8 +170,8 @@
 			children = (
 				23420DF225D6E38100736F21 /* Cell */,
 				23420DD625D6CD0A00736F21 /* Accounts.storyboard */,
-				23420DDA25D6CD2400736F21 /* AccountsViewController.swift */,
-				23420DDE25D6CE5200736F21 /* AccountsVC+TableView.swift */,
+				239A908825D6FD87001B55D1 /* Add Account */,
+				239A908725D6FD74001B55D1 /* Show Accounts */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +183,24 @@
 				23420DF425D6E39E00736F21 /* AccountCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		239A908725D6FD74001B55D1 /* Show Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				23420DDA25D6CD2400736F21 /* AccountsViewController.swift */,
+				23420DDE25D6CE5200736F21 /* AccountsVC+TableView.swift */,
+			);
+			path = "Show Accounts";
+			sourceTree = "<group>";
+		};
+		239A908825D6FD87001B55D1 /* Add Account */ = {
+			isa = PBXGroup;
+			children = (
+				23FCDEB725D6FFC40055BF89 /* AddAccountViewController.swift */,
+				23FCDEBB25D70B500055BF89 /* AddAccountVC+PickerView.swift */,
+			);
+			path = "Add Account";
 			sourceTree = "<group>";
 		};
 		23A9F18A25D327FF00272CB8 /* Constants */ = {
@@ -558,6 +583,7 @@
 				23B2353425D413DA000B983F /* Request.swift in Sources */,
 				23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */,
 				23420DEF25D6D65F00736F21 /* AccountsViewModel.swift in Sources */,
+				23FCDEBC25D70B500055BF89 /* AddAccountVC+PickerView.swift in Sources */,
 				23420D8525D4523C00736F21 /* Networking+Budgets.swift in Sources */,
 				23420DE525D6CE8100736F21 /* BudgetsVC+TableView.swift in Sources */,
 				23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */,
@@ -568,6 +594,7 @@
 				23B2352725D40B08000B983F /* UITableView+Extensions.swift in Sources */,
 				23420DCF25D6CBB300736F21 /* Networking+Accounts.swift in Sources */,
 				23A9F1D325D33D9B00272CB8 /* MoneyAppNavigationController.swift in Sources */,
+				23FCDEC025D70BA80055BF89 /* AddAccountViewModel.swift in Sources */,
 				23B2352B25D40BB3000B983F /* BudgetModel.swift in Sources */,
 				23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */,
 				23420DF525D6E39E00736F21 /* AccountCell.swift in Sources */,
@@ -575,6 +602,7 @@
 				23B2352025D40290000B983F /* BudgetCell.swift in Sources */,
 				23420DDB25D6CD2400736F21 /* AccountsViewController.swift in Sources */,
 				23420DDF25D6CE5200736F21 /* AccountsVC+TableView.swift in Sources */,
+				23FCDEB825D6FFC40055BF89 /* AddAccountViewController.swift in Sources */,
 				23A9F18C25D3281600272CB8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
