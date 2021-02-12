@@ -16,19 +16,20 @@ extension AddAccountViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return addAccountViewModel.getAccountTypeCount()
+        return addAccountViewModel?.getAccountTypeCount() ?? 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return addAccountViewModel.getAccountTypeItem(row)
+        return addAccountViewModel?.getAccountTypeItem(row)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        addAccountViewModel.selectedIndex = row
+        addAccountViewModel?.selectedIndex = row
     }
     
     @objc func showTypeOfAccunt(){
-        accountTypeTextField.text = addAccountViewModel.getAccountTypeItem(addAccountViewModel.selectedIndex)
+        addAccountViewModel?.accountTypeForServerValue = addAccountViewModel?.accountTypeForServerArray[addAccountViewModel?.selectedIndex ?? 0] ?? ""
+        accountTypeTextField.text = addAccountViewModel?.getAccountTypeItem(addAccountViewModel?.selectedIndex ?? 0)
         self.view.endEditing(true)
     }
 

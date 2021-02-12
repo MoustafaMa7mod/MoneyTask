@@ -15,7 +15,7 @@ extension Networking {
             return
         }
         
-        request = Request(accessToken: accessToken, method: .get, body: nil)
+        request = Request(accessToken: accessToken, method: .get, parameters: nil)
         
         request?.request(url, completion: { data, errorMessage in
             guard errorMessage == nil else{

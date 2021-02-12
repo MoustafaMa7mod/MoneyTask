@@ -16,7 +16,7 @@ extension Networking {
             return
         }
         
-        request = Request(accessToken: accessToken, method: .get, body: nil)
+        request = Request(accessToken: accessToken, method: .get, parameters: nil)
 
         request?.request(url, completion: { data, errorMessage in
             guard errorMessage == nil else{
@@ -25,8 +25,29 @@ extension Networking {
             }
             
             guard let data = data else {return}
-            let budgetsModel = self.decode(type: AccountModel.self, data: data)
-            completion(budgetsModel , nil)
+            let accountsModel = self.decode(type: AccountModel.self, data: data)
+            completion(accountsModel , nil)
+        })
+    }
+    
+    func addNewAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil , parameters: [String:Any]  ,completion: @escaping(AddAccountModel?, String?) -> Void) {
+        
+        let accountURL = URLS.getBudgetsAccounts(budgetId, lastKnowledgeOfServer)
+        guard let url = URL(string: accountURL) else {
+            return
+        }
+        
+        request = Request(accessToken: accessToken, method: .post, parameters: parameters)
+
+        request?.request(url, completion: { data, errorMessage in
+            guard errorMessage == nil else{
+                completion(nil , errorMessage)
+                return
+            }
+            
+            guard let data = data else {return}
+            let addAccountModel = self.decode(type: AddAccountModel.self, data: data)
+            completion(addAccountModel , nil)
         })
     }
 

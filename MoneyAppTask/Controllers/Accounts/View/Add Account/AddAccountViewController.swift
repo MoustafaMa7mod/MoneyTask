@@ -17,9 +17,13 @@ class AddAccountViewController: UIViewController {
     // MARK:- varaibles
     var budgetObject: BudgetObject?
     var accountTypesPickerView: UIPickerView = UIPickerView()
-    var addAccountViewModel = AddAccountViewModel()
+    var addAccountViewModel: AddAccountViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let budgetObject =  budgetObject {
+            addAccountViewModel = AddAccountViewModel(budgetObject: budgetObject)
+        }
+
         setupNavBar()
         setupPickerView()
     }
@@ -61,5 +65,17 @@ class AddAccountViewController: UIViewController {
     
     @IBAction func saveNewAccount(_ sender: Any) {
         
+        let object = ["account": ["name": self.accountNameTextField.text ?? "" , "type": addAccountViewModel?.accountTypeForServerValue ?? "" ,"balance": Int(balanceTextField.text ?? "0")  ?? 0]]
+        
+        addAccountViewModel?.addAccountData(withParamter: object , Andcompletion: { loadData, message in
+            if loadData {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+            }else{
+                print(message ?? "")
+            }
+        })
     }
 }

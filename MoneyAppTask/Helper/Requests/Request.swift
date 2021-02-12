@@ -17,7 +17,7 @@ enum Method: String{
 class Request: NSObject {
     private(set) var accessToken: String
     var method: Method?
-    var body: Data?
+    var parameters: [String: Any]?
     var authenticated: Bool {
         return true
     }
@@ -26,10 +26,10 @@ class Request: NSObject {
         return "Bearer \(self.accessToken)"
     }
     
-    init(accessToken: String , method: Method , body: Data?) {
+    init(accessToken: String , method: Method , parameters: [String: Any]?) {
         self.accessToken = accessToken
         self.method = method
-        self.body = body
+        self.parameters = parameters
     }
     
     
@@ -38,7 +38,10 @@ class Request: NSObject {
         request.httpMethod = self.method?.rawValue
         if self.method?.rawValue == "POST" || self.method?.rawValue == "PUT"  {
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = self.body
+            guard let body = try? JSONSerialization.data(withJSONObject: self.parameters ?? [:], options: []) else {
+                fatalError("Something went wrong in parameters!")
+            }
+            request.httpBody = body
         }
         if (self.authenticated) {
             request.setValue(self.authorizationHeader, forHTTPHeaderField: "Authorization")
@@ -60,7 +63,7 @@ class Request: NSObject {
             }
             print(response.statusCode)
             switch response.statusCode {
-            case 200:
+            case 200...201:
                 guard let data = data else {return}
                 completion(data , nil)
             case 401:

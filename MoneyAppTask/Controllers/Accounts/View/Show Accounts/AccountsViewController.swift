@@ -46,6 +46,7 @@ class AccountsViewController: UIViewController {
     // MARK: - actions
     @objc func gotoAddAccount(){
         let addAccountViewController = AddAccountViewController.instantiateViewController()
+        addAccountViewController.budgetObject = self.accountsViewModel?.budgetObject
         let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
         self.present(nav , animated: true)
     }

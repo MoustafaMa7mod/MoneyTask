@@ -7,6 +7,16 @@
 
 import Foundation
 
+
+struct AddAccountModel: Codable {
+    var data: AddAccount?
+}
+
+struct AddAccount: Codable {
+    var account: AccountObject?
+}
+
+
 struct AccountModel: Codable {
     var data: Accounts?
 }
@@ -14,6 +24,7 @@ struct AccountModel: Codable {
 struct Accounts: Codable {
     var accounts: [AccountObject]?
 }
+
 struct AccountObject: Codable {
     var id: String?
     var name: String?
