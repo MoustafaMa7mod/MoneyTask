@@ -25,6 +25,10 @@ extension PayeesViewController: UITableViewDataSource , UITableViewDelegate{
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Mostafa")
+    }
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

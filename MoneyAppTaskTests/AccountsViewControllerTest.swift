@@ -44,7 +44,9 @@ class AccountsViewControllerTest: XCTestCase {
     
     func test_table_view_confroms_to_table_view_delegate_protocol() {
         XCTAssertTrue(accountsViewController.conforms(to: UITableViewDelegate.self))
+        XCTAssertTrue(accountsViewController.responds(to: #selector(accountsViewController.tableView(_:didSelectRowAt:))))
     }
+    
 
     func test_table_view_has_data_source() {
         XCTAssertNotNil(accountsViewController.accountsTableView.dataSource)
