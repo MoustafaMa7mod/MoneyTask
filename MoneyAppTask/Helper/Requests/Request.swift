@@ -13,11 +13,12 @@ enum Method: String{
     case put = "PUT"
 }
 
-
 class Request: NSObject {
     private(set) var accessToken: String
     var method: Method?
     var parameters: [String : [String : Any]]?
+    private let session: URLSessionProtocol
+
     var authenticated: Bool {
         return true
     }
@@ -26,10 +27,12 @@ class Request: NSObject {
         return "Bearer \(self.accessToken)"
     }
     
-    init(accessToken: String , method: Method , parameters: [String : [String : Any]]?) {
+    init(accessToken: String , method: Method , parameters: [String : [String : Any]]? , session: URLSessionProtocol) {
         self.accessToken = accessToken
         self.method = method
         self.parameters = parameters
+        self.session = session
+
     }
     
     
@@ -54,9 +57,7 @@ class Request: NSObject {
     
     func request(_ url: URL, completion: @escaping (Data?, String?) -> Void) {
         
-        let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: configURLRequest(url)) { data, response, error in
-            
             guard error == nil , let response = response as? HTTPURLResponse else {
                 completion(nil , error?.localizedDescription ?? "Something went wrong!" )
                 return
@@ -74,7 +75,6 @@ class Request: NSObject {
             }
 
         }
-        
         task.resume()
     }
     

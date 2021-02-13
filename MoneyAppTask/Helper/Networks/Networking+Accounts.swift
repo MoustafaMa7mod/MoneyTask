@@ -16,7 +16,7 @@ extension Networking {
             return
         }
         
-        request = Request(accessToken: accessToken, method: .get, parameters: nil)
+        request = Request(accessToken: accessToken, method: .get, parameters: nil , session: URLSession.shared)
 
         request?.request(url, completion: { data, errorMessage in
             guard errorMessage == nil else{
@@ -37,7 +37,7 @@ extension Networking {
             return
         }
         
-        request = Request(accessToken: accessToken, method: .post, parameters: parameters)
+        request = Request(accessToken: accessToken, method: .post, parameters: parameters , session: URLSession.shared)
 
         request?.request(url, completion: { data, errorMessage in
             guard errorMessage == nil else{

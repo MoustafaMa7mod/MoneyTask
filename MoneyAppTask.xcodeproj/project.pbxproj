@@ -48,6 +48,10 @@
 		23FCDEDC25D7F5310055BF89 /* AccountTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEDA25D7F5310055BF89 /* AccountTypeCell.swift */; };
 		23FCDEDD25D7F5310055BF89 /* AccountTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FCDEDB25D7F5310055BF89 /* AccountTypeCell.xib */; };
 		23FCDEE125D804710055BF89 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEE025D804710055BF89 /* Encodable.swift */; };
+		23FCDEE725D809C60055BF89 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEE625D809C60055BF89 /* MockURLSession.swift */; };
+		23FCDEF325D80B750055BF89 /* Request+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */; };
+		23FCDEF725D810E40055BF89 /* BudgetsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */; };
+		23FCDEFB25D81E4F0055BF89 /* AccountsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +115,10 @@
 		23FCDEDA25D7F5310055BF89 /* AccountTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeCell.swift; sourceTree = "<group>"; };
 		23FCDEDB25D7F5310055BF89 /* AccountTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTypeCell.xib; sourceTree = "<group>"; };
 		23FCDEE025D804710055BF89 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		23FCDEE625D809C60055BF89 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+URLSessionProtocol.swift"; sourceTree = "<group>"; };
+		23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsViewControllerTest.swift; sourceTree = "<group>"; };
+		23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerTest.swift; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				23A9F1B825D336B700272CB8 /* SaveDataMockup.swift */,
+				23FCDEE625D809C60055BF89 /* MockURLSession.swift */,
 			);
 			path = MockUps;
 			sourceTree = "<group>";
@@ -291,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				23B2353325D413DA000B983F /* Request.swift */,
+				23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -333,6 +343,8 @@
 				23CFDADF25D2F1FD00387BE9 /* Info.plist */,
 				23A9F1B725D336A700272CB8 /* MockUps */,
 				23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */,
+				23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */,
+				23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */,
 			);
 			path = MoneyAppTaskTests;
 			sourceTree = "<group>";
@@ -643,6 +655,7 @@
 				23B2352F25D40EDC000B983F /* BudgetsViewModel.swift in Sources */,
 				23420D8125D4461600736F21 /* Networking.swift in Sources */,
 				23FCDEDC25D7F5310055BF89 /* AccountTypeCell.swift in Sources */,
+				23FCDEF325D80B750055BF89 /* Request+URLSessionProtocol.swift in Sources */,
 				23B2351A25D3FFD7000B983F /* BudgetsViewController.swift in Sources */,
 				23A9F1E325D344C700272CB8 /* UIView.swift in Sources */,
 				23B2352725D40B08000B983F /* UITableView+Extensions.swift in Sources */,
@@ -667,8 +680,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FCDEFB25D81E4F0055BF89 /* AccountsViewControllerTest.swift in Sources */,
+				23FCDEE725D809C60055BF89 /* MockURLSession.swift in Sources */,
 				23A9F19425D32C0500272CB8 /* AuthenticationTests.swift in Sources */,
 				23A9F1B925D336B700272CB8 /* SaveDataMockup.swift in Sources */,
+				23FCDEF725D810E40055BF89 /* BudgetsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
