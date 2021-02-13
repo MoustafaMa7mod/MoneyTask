@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AddAccountViewController: UIViewController {
  
@@ -18,28 +20,43 @@ class AddAccountViewController: UIViewController {
     var budgetObject: BudgetObject?
     var accountTypesPickerView: UIPickerView = UIPickerView()
     var addAccountViewModel: AddAccountViewModel?
+    var disposed = DisposeBag()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let budgetObject =  budgetObject {
             addAccountViewModel = AddAccountViewModel(budgetObject: budgetObject)
         }
         setupNavBar()
-        accountTypeTextField.addTarget(self, action: #selector(myTargetFunction), for: .touchDown)
+        accountTypeTextField.addTarget(self, action: #selector(gotoAccountTypePage), for: .touchDown)
+        bindData()
     }
     
     
-    @objc func myTargetFunction(textField: UITextField) {
-        let addAccountViewController = AccountTypesViewController.instantiateViewController()
-        addAccountViewController.passData = { [weak self] accountTypeKey , accountTypeValue in
-            print(accountTypeKey)
-            print(accountTypeValue)
-            self?.accountTypeTextField.text = accountTypeKey
-            self?.addAccountViewModel?.accountType = accountTypeValue
+    
+    private func bindData(){
+        guard let addAccountViewModel = addAccountViewModel else {
+            return
         }
-        let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
-        self.present(nav , animated: true)
-
+        configure(with: addAccountViewModel)
+        addAccountViewModel.reloadView = { [weak self] in
+            self?.accountNameTextField.text = self?.addAccountViewModel?.accountTypeName.value
+            self?.balanceTextField.text = self?.addAccountViewModel?.accountBalance.value
+            self?.accountTypeTextField.text = self?.addAccountViewModel?.accountTypeValue.value
+           
+        }
     }
+    
+    func configure(with viewModel: AddAccountViewModel) {
+        guard let addAccountViewModel = addAccountViewModel else {
+            return
+        }
+        accountNameTextField.rx.text.map { $0 ?? "" }.bind(to: addAccountViewModel.accountTypeName).disposed(by: disposed)
+        balanceTextField.rx.text.map { $0 ?? "" }.bind(to: addAccountViewModel.accountBalance).disposed(by: disposed)
+        
+    }
+
 
 
     class func instantiateViewController() -> AddAccountViewController  {
@@ -58,19 +75,29 @@ class AddAccountViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    @objc func gotoAccountTypePage(textField: UITextField) {
+        let addAccountViewController = AccountTypesViewController.instantiateViewController()
+        addAccountViewController.passData = { [weak self] accountTypeKey , accountTypeValue in
+            self?.accountTypeTextField.text = accountTypeKey
+            self?.addAccountViewModel?.accountType = accountTypeValue
+        }
+        let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
+        self.present(nav , animated: true)
+
+    }
+    
     @IBAction func saveNewAccount(_ sender: Any) {
-        
-//        let object = ["account": ["name": self.accountNameTextField.text ?? "" , "type": addAccountViewModel?.accountTypeForServerValue ?? "" ,"balance": Int(balanceTextField.text ?? "0")  ?? 0]]
-//
-//        addAccountViewModel?.addAccountData(withParamter: object , Andcompletion: { loadData, message in
-//            if loadData {
-//                DispatchQueue.main.async {
-//                    self.dismiss(animated: true, completion: nil)
-//                }
-//
-//            }else{
-//                print(message ?? "")
-//            }
-//        })
+        guard let paramter = addAccountViewModel?.parseDataFromView() else {return}
+        addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { loadData, message in
+            if loadData {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+
+            }else{
+                print(message ?? "")
+            }
+        })
     }
 }

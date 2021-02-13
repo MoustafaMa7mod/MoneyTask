@@ -17,7 +17,7 @@ enum Method: String{
 class Request: NSObject {
     private(set) var accessToken: String
     var method: Method?
-    var parameters: [String: Any]?
+    var parameters: [String : [String : Any]]?
     var authenticated: Bool {
         return true
     }
@@ -26,7 +26,7 @@ class Request: NSObject {
         return "Bearer \(self.accessToken)"
     }
     
-    init(accessToken: String , method: Method , parameters: [String: Any]?) {
+    init(accessToken: String , method: Method , parameters: [String : [String : Any]]?) {
         self.accessToken = accessToken
         self.method = method
         self.parameters = parameters

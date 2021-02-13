@@ -30,7 +30,7 @@ extension Networking {
         })
     }
     
-    func addNewAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil , parameters: [String:Any]  ,completion: @escaping(AddAccountModel?, String?) -> Void) {
+    func addNewAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil , parameters: [String : [String : Any]]  ,completion: @escaping(AddAccountModel?, String?) -> Void) {
         
         let accountURL = URLS.getBudgetsAccounts(budgetId, lastKnowledgeOfServer)
         guard let url = URL(string: accountURL) else {
