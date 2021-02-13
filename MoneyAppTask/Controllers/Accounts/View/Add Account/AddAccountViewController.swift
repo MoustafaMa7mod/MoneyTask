@@ -23,10 +23,24 @@ class AddAccountViewController: UIViewController {
         if let budgetObject =  budgetObject {
             addAccountViewModel = AddAccountViewModel(budgetObject: budgetObject)
         }
-
         setupNavBar()
-        setupPickerView()
+        accountTypeTextField.addTarget(self, action: #selector(myTargetFunction), for: .touchDown)
     }
+    
+    
+    @objc func myTargetFunction(textField: UITextField) {
+        let addAccountViewController = AccountTypesViewController.instantiateViewController()
+        addAccountViewController.passData = { [weak self] accountTypeKey , accountTypeValue in
+            print(accountTypeKey)
+            print(accountTypeValue)
+            self?.accountTypeTextField.text = accountTypeKey
+            self?.addAccountViewModel?.accountType = accountTypeValue
+        }
+        let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
+        self.present(nav , animated: true)
+
+    }
+
 
     class func instantiateViewController() -> AddAccountViewController  {
         return UIStoryboard(name: "Accounts", bundle: nil).instantiateViewController(withIdentifier:  String(describing: AddAccountViewController.self)) as! AddAccountViewController
@@ -39,25 +53,6 @@ class AddAccountViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancel
     }
     
-    // MARK:- setup setting of picker view
-    private func setupPickerView(){
-        accountTypesPickerView.delegate = self
-        accountTypesPickerView.dataSource = self
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.sizeToFit()
-
-        let doneButton = UIBarButtonItem(title: "Select", style: .done, target: self, action: #selector(showTypeOfAccunt))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-
-        toolBar.setItems([spaceButton , doneButton], animated: true)
-        toolBar.isUserInteractionEnabled = true
-
-        accountTypeTextField.inputView = accountTypesPickerView
-        accountTypeTextField.inputAccessoryView = toolBar
-
-    }
     // MARK:- Actions
     @objc func backToAccountList(){
         self.dismiss(animated: true, completion: nil)
@@ -65,17 +60,17 @@ class AddAccountViewController: UIViewController {
     
     @IBAction func saveNewAccount(_ sender: Any) {
         
-        let object = ["account": ["name": self.accountNameTextField.text ?? "" , "type": addAccountViewModel?.accountTypeForServerValue ?? "" ,"balance": Int(balanceTextField.text ?? "0")  ?? 0]]
-        
-        addAccountViewModel?.addAccountData(withParamter: object , Andcompletion: { loadData, message in
-            if loadData {
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
-                }
-                
-            }else{
-                print(message ?? "")
-            }
-        })
+//        let object = ["account": ["name": self.accountNameTextField.text ?? "" , "type": addAccountViewModel?.accountTypeForServerValue ?? "" ,"balance": Int(balanceTextField.text ?? "0")  ?? 0]]
+//
+//        addAccountViewModel?.addAccountData(withParamter: object , Andcompletion: { loadData, message in
+//            if loadData {
+//                DispatchQueue.main.async {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+//
+//            }else{
+//                print(message ?? "")
+//            }
+//        })
     }
 }

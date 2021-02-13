@@ -8,12 +8,10 @@
 import UIKit
 
 class AddAccountViewModel: NSObject {
-    var accountType = ["Checking" , "Savings" , "Cash" , "Credit Card" , "Line of Credit"]
-    var accountTypeForServerArray = ["checking" , "savings" , "cash" , "creditCard" , "lineOfCredit"]
-    var accountTypeForServerValue = String()
     
     var selectedIndex = 0
     var budgetObject = BudgetObject()
+    var accountType = String()
     
     init(budgetObject: BudgetObject) {
         self.budgetObject = budgetObject
@@ -33,12 +31,6 @@ class AddAccountViewModel: NSObject {
         }
     }
     
-    func getAccountTypeCount() -> Int{
-        return accountType.count
-    }
-    
-    func getAccountTypeItem(_ index: Int) -> String{
-        return accountType[index]
-    }
+ 
 
 }
