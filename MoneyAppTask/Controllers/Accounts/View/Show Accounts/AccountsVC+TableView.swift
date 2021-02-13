@@ -25,6 +25,14 @@ extension AccountsViewController: UITableViewDataSource , UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let budget = accountsViewModel?.budgetObject
+
+        let payeesViewController = PayeesViewController.instantiateViewController()
+        payeesViewController.budgetObject = budget
+        self.navigationController?.pushViewController(payeesViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

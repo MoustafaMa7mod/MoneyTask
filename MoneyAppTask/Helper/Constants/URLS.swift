@@ -20,4 +20,11 @@ struct URLS {
         }
         return accountURL
     }
+    
+    
+    static func getPayees(_ budgetId: String) -> String {
+        let payeeURL = getBudgets + "/\(budgetId)/payees"
+        return payeeURL
+    }
+
 }

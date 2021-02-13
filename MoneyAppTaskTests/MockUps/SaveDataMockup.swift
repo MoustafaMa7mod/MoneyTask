@@ -22,4 +22,8 @@ class SaveDataMockup: SaveData {
         return token
     }
     
+    override func deleteData() {
+        keyChain.delete("token")
+    }
+    
 }

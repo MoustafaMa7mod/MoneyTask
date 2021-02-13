@@ -27,4 +27,10 @@ class SaveData: NSObject {
         return token
     }
     
+    func deleteData() {
+        keyChain.synchronizable = true
+        keyChain.delete("token")
+    }
+
+    
 }

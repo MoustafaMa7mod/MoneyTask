@@ -16,6 +16,7 @@ class AuthenticationTests: XCTestCase {
     override func setUpWithError() throws {
         saveDataMockup = SaveDataMockup()
         authenticationViewController = AuthenticationViewController(saveData: saveDataMockup)
+        
     }
     
     override func tearDownWithError() throws {
