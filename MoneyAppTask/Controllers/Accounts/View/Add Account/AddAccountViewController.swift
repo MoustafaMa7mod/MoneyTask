@@ -21,7 +21,7 @@ class AddAccountViewController: UIViewController {
     var accountTypesPickerView: UIPickerView = UIPickerView()
     var addAccountViewModel: AddAccountViewModel?
     var disposed = DisposeBag()
-
+    var paaData:(()->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,15 +84,15 @@ class AddAccountViewController: UIViewController {
         }
         let nav = MoneyAppNavigationController(rootViewController: addAccountViewController)
         self.present(nav , animated: true)
-
     }
     
     @IBAction func saveNewAccount(_ sender: Any) {
         guard let paramter = addAccountViewModel?.parseDataFromView() else {return}
-        addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { loadData, message in
+        addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { [weak self] loadData, message in
             if loadData {
                 DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: nil)
+                    self?.paaData?()
+                    self?.dismiss(animated: true, completion: nil)
                 }
 
             }else{

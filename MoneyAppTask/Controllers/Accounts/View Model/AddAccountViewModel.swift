@@ -15,18 +15,11 @@ class AddAccountViewModel: NSObject {
     var budgetObject = BudgetObject()
     var accountType = String()
     var accountObject = AccountObject()
-
-    
-    
-    var accountObjectModel = BehaviorRelay<AccountObject>(value: AccountObject())
     let accountTypeName =  BehaviorRelay<String>(value: "")
     let accountBalance = BehaviorRelay<String>(value: "")
     let accountTypeValue = BehaviorRelay<String>(value: "")
-    var reloadView: () -> () = {  }
+    var reloadView: () -> () = {}
 
-    
-    
-    
     init(budgetObject: BudgetObject) {
         self.budgetObject = budgetObject
     }
@@ -39,13 +32,10 @@ class AddAccountViewModel: NSObject {
         
         let optionalDict = accountObject.dictionary
         let object = ["account": optionalDict ?? [:]]
-        print(object)
 
         return object
     }
 
-    
-    
     func addAccountData(withParamter parameters: [String : [String : Any]] , Andcompletion completion: @escaping( Bool , String?) -> Void) {
         Networking.shared.addNewAccouts(budgetObject.id ?? "", parameters: parameters) { accountObject, message in
             if let accountModel = accountObject {
@@ -56,13 +46,5 @@ class AddAccountViewModel: NSObject {
             }
 
         }
-    }
-}
-
-
-extension Encodable {
-    var dictionary: [String: Any]? {
-        guard let data = try? JSONEncoder().encode(self) else { return nil }
-        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
     }
 }
