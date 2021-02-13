@@ -52,6 +52,7 @@
 		23FCDEF325D80B750055BF89 /* Request+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */; };
 		23FCDEF725D810E40055BF89 /* BudgetsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */; };
 		23FCDEFB25D81E4F0055BF89 /* AccountsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */; };
+		23FCDEFF25D82B7D0055BF89 /* AddAccountViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDEFE25D82B7D0055BF89 /* AddAccountViewControllerTest.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+URLSessionProtocol.swift"; sourceTree = "<group>"; };
 		23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsViewControllerTest.swift; sourceTree = "<group>"; };
 		23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewControllerTest.swift; sourceTree = "<group>"; };
+		23FCDEFE25D82B7D0055BF89 /* AddAccountViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewControllerTest.swift; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +347,7 @@
 				23A9F19325D32C0500272CB8 /* AuthenticationTests.swift */,
 				23FCDEF625D810E40055BF89 /* BudgetsViewControllerTest.swift */,
 				23FCDEFA25D81E4F0055BF89 /* AccountsViewControllerTest.swift */,
+				23FCDEFE25D82B7D0055BF89 /* AddAccountViewControllerTest.swift */,
 			);
 			path = MoneyAppTaskTests;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FCDEFF25D82B7D0055BF89 /* AddAccountViewControllerTest.swift in Sources */,
 				23FCDEFB25D81E4F0055BF89 /* AccountsViewControllerTest.swift in Sources */,
 				23FCDEE725D809C60055BF89 /* MockURLSession.swift in Sources */,
 				23A9F19425D32C0500272CB8 /* AuthenticationTests.swift in Sources */,

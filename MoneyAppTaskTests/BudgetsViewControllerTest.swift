@@ -28,7 +28,6 @@ class BudgetsViewControllerTest: XCTestCase {
     
     func test_nav_title() {
         XCTAssertEqual(budgetsViewController?.title , "Budgets")
-         
     }
     
     func test_has_a_table_view() {
