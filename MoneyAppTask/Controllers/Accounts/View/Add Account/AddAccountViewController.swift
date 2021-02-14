@@ -88,7 +88,7 @@ class AddAccountViewController: UIViewController {
     
     @IBAction func saveNewAccount(_ sender: Any) {
         guard let paramter = addAccountViewModel?.parseDataFromView() else {return}
-        addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { [weak self] loadData, message in
+        addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { [weak self] loadData, error in
             if loadData {
                 DispatchQueue.main.async {
                     self?.paaData?()
@@ -96,7 +96,9 @@ class AddAccountViewController: UIViewController {
                 }
 
             }else{
-                print(message ?? "")
+                DispatchQueue.main.async {
+                    self?.showErrorAlert("Alert \(error?.name ?? "")", error?.detail ?? "")
+                }
             }
         })
     }

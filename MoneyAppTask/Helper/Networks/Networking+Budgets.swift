@@ -9,7 +9,7 @@ import Foundation
 
 
 extension Networking {
-    func getAllBudgets(completion: @escaping(BudgetsModel?, String?) -> Void) {
+    func getAllBudgets(completion: @escaping(BudgetsModel?, ErrorDetailsObject?) -> Void) {
         
         guard let url = URL(string: URLS.getBudgets) else {
             return
@@ -17,9 +17,9 @@ extension Networking {
         
         request = Request(accessToken: accessToken, method: .get, parameters: nil , session: URLSession.shared)
         
-        request?.request(url, completion: { data, errorMessage in
-            guard errorMessage == nil else{
-                completion(nil , errorMessage)
+        request?.request(url, completion: { data, errorObject in
+            guard errorObject == nil else{
+                completion(nil , errorObject)
                 return
             }
             

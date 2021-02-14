@@ -8,7 +8,7 @@
 import Foundation
 
 extension Networking {
-    func getAllPayeeTransactions(_ budgetId: String, _ payeesId: String  , completion: @escaping(PayeeTransactionsModel?, String?) -> Void) {
+    func getAllPayeeTransactions(_ budgetId: String, _ payeesId: String  , completion: @escaping(PayeeTransactionsModel?, ErrorDetailsObject?) -> Void) {
         
         let accountURL = URLS.getPayeeTransactions(budgetId,payeesId)
         print(accountURL)
@@ -18,9 +18,9 @@ extension Networking {
         
         request = Request(accessToken: accessToken, method: .get, parameters: nil , session: URLSession.shared)
 
-        request?.request(url, completion: { data, errorMessage in
-            guard errorMessage == nil else{
-                completion(nil , errorMessage)
+        request?.request(url, completion: { data, errorObject in
+            guard errorObject == nil else{
+                completion(nil , errorObject)
                 return
             }
             

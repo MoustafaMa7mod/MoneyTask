@@ -45,13 +45,16 @@ class BudgetsViewController: UIViewController {
     
     // MARK:- get data from server
     private func getData(){
-        budgetsViewModel.getData(completion: { [weak self] loadData ,message in
+        budgetsViewModel.getData(completion: { [weak self] loadData ,error in
             if loadData {
                 DispatchQueue.main.async {
                     self?.budgetTableView.reloadData()
                 }
             }else{
-                print(message ?? "")
+                DispatchQueue.main.async {
+                    self?.showErrorAlert("Alert \(error?.name ?? "")", error?.detail ?? "")
+                }
+                
             }
         })
     }

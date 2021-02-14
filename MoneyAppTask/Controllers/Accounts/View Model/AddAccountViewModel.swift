@@ -36,13 +36,13 @@ class AddAccountViewModel: NSObject {
         return object
     }
 
-    func addAccountData(withParamter parameters: [String : [String : Any]] , Andcompletion completion: @escaping( Bool , String?) -> Void) {
-        Networking.shared.addNewAccouts(budgetObject.id ?? "", parameters: parameters) { accountObject, message in
+    func addAccountData(withParamter parameters: [String : [String : Any]] , Andcompletion completion: @escaping( Bool , ErrorDetailsObject?) -> Void) {
+        Networking.shared.addNewAccouts(budgetObject.id ?? "", parameters: parameters) { accountObject, error in
             if let accountModel = accountObject {
                 print(accountModel)
                 completion(true , nil)
             }else{
-                completion(false , message)
+                completion(false , error)
             }
 
         }

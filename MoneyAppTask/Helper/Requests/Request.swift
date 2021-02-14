@@ -49,35 +49,30 @@ class Request: NSObject {
         if (self.authenticated) {
             request.setValue(self.authorizationHeader, forHTTPHeaderField: "Authorization")
         }
-        
-        print(request)
-        
+                
         return request
     }
     
-    func request(_ url: URL, completion: @escaping (Data?, String?) -> Void) {
+    func request(_ url: URL, completion: @escaping (Data?, ErrorDetailsObject?) -> Void) {
         
         let task = session.dataTask(with: configURLRequest(url)) { data, response, error in
             guard error == nil , let response = response as? HTTPURLResponse else {
-                completion(nil , error?.localizedDescription ?? "Something went wrong!" )
+                completion(nil , ErrorDetailsObject(id: "000", name: "Unknown", detail: "Something went wrong!") )
                 return
             }
-            print(response.statusCode)
+            guard let data = data else {return}
             switch response.statusCode {
-            case 200...201:
-                guard let data = data else {return}
+            case 200...299:
                 completion(data , nil)
-            case 401:
-                completion(nil , error?.localizedDescription ?? "unauthorized")
+            case 400...499:
+                let errorModel = Networking.shared.decode(type: ErrorDetailsModel.self, data: data)
+                completion(nil , errorModel?.error)
             default:
-                completion(nil  , error?.localizedDescription ?? "Something went wrong!")
+                completion(nil  , ErrorDetailsObject(id: "000", name: "Unknown", detail: "Something went wrong!"))
                 break
             }
 
         }
         task.resume()
     }
-    
-    
-    
 }

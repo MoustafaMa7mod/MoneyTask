@@ -17,13 +17,13 @@ class PayeesViewModel: NSObject {
     }
     
     
-    func getData(completion: @escaping( Bool , String?) -> Void) {
-        Networking.shared.getAllPayees(budgetObject.id ?? "") { [weak self] payessModelObject, message in
+    func getData(completion: @escaping( Bool , ErrorDetailsObject?) -> Void) {
+        Networking.shared.getAllPayees(budgetObject.id ?? "") { [weak self] payessModelObject, error in
             if let payessModelObject = payessModelObject {
                 self?.payeesModel = payessModelObject
                 completion(true , nil)
             }else{
-                completion(false , message)
+                completion(false , error)
             }
         }
     }

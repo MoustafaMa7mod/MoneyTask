@@ -70,6 +70,8 @@
 		23FCDF4725D92A7A0055BF89 /* PayeeTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4625D92A7A0055BF89 /* PayeeTransactionsViewModel.swift */; };
 		23FCDF4B25D92B460055BF89 /* Networking+PayeeTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4A25D92B460055BF89 /* Networking+PayeeTransactions.swift */; };
 		23FCDF4F25D932B80055BF89 /* PayeeTransactionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4E25D932B80055BF89 /* PayeeTransactionsTest.swift */; };
+		23FCDF5325D93A9A0055BF89 /* ErrorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF5225D93A9A0055BF89 /* ErrorDetailsModel.swift */; };
+		23FCDF5925D93D810055BF89 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF5825D93D810055BF89 /* UIViewController.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,8 @@
 		23FCDF4625D92A7A0055BF89 /* PayeeTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsViewModel.swift; sourceTree = "<group>"; };
 		23FCDF4A25D92B460055BF89 /* Networking+PayeeTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+PayeeTransactions.swift"; sourceTree = "<group>"; };
 		23FCDF4E25D932B80055BF89 /* PayeeTransactionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsTest.swift; sourceTree = "<group>"; };
+		23FCDF5225D93A9A0055BF89 /* ErrorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailsModel.swift; sourceTree = "<group>"; };
+		23FCDF5825D93D810055BF89 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +343,7 @@
 			children = (
 				23B2353325D413DA000B983F /* Request.swift */,
 				23FCDEF225D80B750055BF89 /* Request+URLSessionProtocol.swift */,
+				23FCDF5225D93A9A0055BF89 /* ErrorDetailsModel.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				23A9F1E225D344C700272CB8 /* UIView.swift */,
 				23B2352625D40B08000B983F /* UITableView+Extensions.swift */,
 				23FCDEE025D804710055BF89 /* Encodable.swift */,
+				23FCDF5825D93D810055BF89 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -772,6 +778,7 @@
 				23B2353425D413DA000B983F /* Request.swift in Sources */,
 				23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */,
 				23FCDF1625D83C1D0055BF89 /* PayeesViewModel.swift in Sources */,
+				23FCDF5325D93A9A0055BF89 /* ErrorDetailsModel.swift in Sources */,
 				23FCDF0C25D838EC0055BF89 /* PayeesViewController.swift in Sources */,
 				23FCDF4725D92A7A0055BF89 /* PayeeTransactionsViewModel.swift in Sources */,
 				23FCDF3A25D928A90055BF89 /* PayeeTransactionsVC+TableView.swift in Sources */,
@@ -791,6 +798,7 @@
 				23B2351A25D3FFD7000B983F /* BudgetsViewController.swift in Sources */,
 				23A9F1E325D344C700272CB8 /* UIView.swift in Sources */,
 				23FCDF1E25D83D630055BF89 /* Networking+Payees.swift in Sources */,
+				23FCDF5925D93D810055BF89 /* UIViewController.swift in Sources */,
 				23B2352725D40B08000B983F /* UITableView+Extensions.swift in Sources */,
 				23420DCF25D6CBB300736F21 /* Networking+Accounts.swift in Sources */,
 				23FCDED425D7F0E30055BF89 /* AccountTypesViewModel.swift in Sources */,

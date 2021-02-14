@@ -11,13 +11,13 @@ class BudgetsViewModel: NSObject {
 
     var budgetsModel = BudgetsModel()
 
-    func getData(completion: @escaping( Bool , String?) -> Void) {
-        Networking.shared.getAllBudgets { [weak self] budgetModel, message in
+    func getData(completion: @escaping( Bool , ErrorDetailsObject?) -> Void) {
+        Networking.shared.getAllBudgets { [weak self] budgetModel, error in
             if let budgetModel = budgetModel {
                 self?.budgetsModel = budgetModel
                 completion(true , nil)
             }else{
-                completion(false , message)
+                completion(false , error)
             }
         }
     }

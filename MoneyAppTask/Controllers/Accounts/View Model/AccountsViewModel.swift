@@ -17,8 +17,8 @@ class AccountsViewModel: NSObject {
     }
     
     
-    func getData(completion: @escaping( Bool , String?) -> Void) {
-        Networking.shared.getAllAccouts(budgetObject.id ?? "") { [weak self] accountModel , message in
+    func getData(completion: @escaping( Bool , ErrorDetailsObject?) -> Void) {
+        Networking.shared.getAllAccouts(budgetObject.id ?? "") { [weak self] accountModel , error in
             if let accountModel = accountModel {
                 guard let filterArrray = accountModel.data?.accounts?.filter({$0.deleted == false}) else {
                     return
@@ -27,7 +27,7 @@ class AccountsViewModel: NSObject {
 
                 completion(true , nil)
             }else{
-                completion(false , message)
+                completion(false , error)
             }
             
         }

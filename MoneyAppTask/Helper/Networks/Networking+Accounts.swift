@@ -8,7 +8,7 @@
 import Foundation
 
 extension Networking {
-    func getAllAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil  ,completion: @escaping(AccountModel?, String?) -> Void) {
+    func getAllAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil  ,completion: @escaping(AccountModel?, ErrorDetailsObject?) -> Void) {
         
         let accountURL = URLS.getBudgetsAccounts(budgetId, lastKnowledgeOfServer)
         print(accountURL)
@@ -18,9 +18,9 @@ extension Networking {
         
         request = Request(accessToken: accessToken, method: .get, parameters: nil , session: URLSession.shared)
 
-        request?.request(url, completion: { data, errorMessage in
-            guard errorMessage == nil else{
-                completion(nil , errorMessage)
+        request?.request(url, completion: { data, errorObject in
+            guard errorObject == nil else{
+                completion(nil , errorObject)
                 return
             }
             
@@ -30,7 +30,7 @@ extension Networking {
         })
     }
     
-    func addNewAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil , parameters: [String : [String : Any]]  ,completion: @escaping(AddAccountModel?, String?) -> Void) {
+    func addNewAccouts(_ budgetId: String ,_ lastKnowledgeOfServer: Int? = nil , parameters: [String : [String : Any]]  ,completion: @escaping(AddAccountModel?, ErrorDetailsObject?) -> Void) {
         
         let accountURL = URLS.getBudgetsAccounts(budgetId, lastKnowledgeOfServer)
         guard let url = URL(string: accountURL) else {
@@ -39,9 +39,9 @@ extension Networking {
         
         request = Request(accessToken: accessToken, method: .post, parameters: parameters , session: URLSession.shared)
 
-        request?.request(url, completion: { data, errorMessage in
-            guard errorMessage == nil else{
-                completion(nil , errorMessage)
+        request?.request(url, completion: { data, errorObject in
+            guard errorObject == nil else{
+                completion(nil , errorObject)
                 return
             }
             

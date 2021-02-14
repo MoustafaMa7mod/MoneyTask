@@ -39,24 +39,11 @@ class AuthenticationTests: XCTestCase {
         }
         
     }
-    
-    
-    func test_save_access_token_in_key_chain(){
-        saveDataMockup.saveAccessToken("1234")
-    }
+
     
     func test_get_access_token_from_key_chain(){
         XCTAssertNotNil(saveDataMockup.getAccessToken())
     }
-    
-    func test_access_token_save_successfully(){
-        XCTAssertEqual(saveDataMockup.getAccessToken(), "1234")
-        XCTAssertNotEqual(saveDataMockup.getAccessToken(), "faild to get access token")
 
-    }
-    
-    
-    
-    
 }
 

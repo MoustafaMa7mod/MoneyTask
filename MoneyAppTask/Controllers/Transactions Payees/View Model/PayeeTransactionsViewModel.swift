@@ -18,13 +18,13 @@ class PayeeTransactionsViewModel: NSObject {
     }
     
     
-    func getData(completion: @escaping( Bool , String?) -> Void) {
-        Networking.shared.getAllPayeeTransactions(budgetObject.id ?? "", payeesObject.id ?? "") { [weak self] payeeTransactionModelObject, message in
+    func getData(completion: @escaping( Bool , ErrorDetailsObject?) -> Void) {
+        Networking.shared.getAllPayeeTransactions(budgetObject.id ?? "", payeesObject.id ?? "") { [weak self] payeeTransactionModelObject, error in
             if let payeeTransactionModelObject = payeeTransactionModelObject {
                 self?.payeeTransactionsModel = payeeTransactionModelObject
                 completion(true , nil)
             }else{
-                completion(false , message)
+                completion(false , error)
             }
         }
     }

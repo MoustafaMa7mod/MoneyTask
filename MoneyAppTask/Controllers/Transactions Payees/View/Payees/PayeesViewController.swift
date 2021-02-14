@@ -51,13 +51,15 @@ class PayeesViewController: UIViewController {
     
     // MARK:- get data from server
     private func getData(){
-        payeesViewModel?.getData(completion: { [weak self] loadData ,message in
+        payeesViewModel?.getData(completion: { [weak self] loadData ,error in
             if loadData {
                 DispatchQueue.main.async {
                     self?.payessTableView.reloadData()
                 }
             }else{
-                print(message ?? "")
+                DispatchQueue.main.async {
+                    self?.showErrorAlert("Alert \(error?.name ?? "")", error?.detail ?? "")
+                }
             }
         })
     }

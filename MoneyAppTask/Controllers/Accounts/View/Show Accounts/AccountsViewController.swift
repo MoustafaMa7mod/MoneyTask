@@ -67,13 +67,15 @@ class AccountsViewController: UIViewController {
     
     // MARK:- get data from server
     private func getData(){
-        accountsViewModel?.getData(completion: { [weak self] loadData ,message in
+        accountsViewModel?.getData(completion: { [weak self] loadData ,error in
             if loadData {
                 DispatchQueue.main.async {
                     self?.accountsTableView.reloadData()
                 }
             }else{
-                print(message ?? "")
+                DispatchQueue.main.async {
+                    self?.showErrorAlert("Alert \(error?.name ?? "")", error?.detail ?? "")
+                }
             }
         })
     }
