@@ -67,7 +67,13 @@ class AccountsViewController: UIViewController {
     
     // MARK:- get data from server
     private func getData(){
+        LoadingIndicatorView.show("Loading")
+
         accountsViewModel?.getData(completion: { [weak self] loadData ,error in
+            DispatchQueue.main.async {
+                LoadingIndicatorView.hide()
+            }
+            
             if loadData {
                 DispatchQueue.main.async {
                     self?.accountsTableView.reloadData()

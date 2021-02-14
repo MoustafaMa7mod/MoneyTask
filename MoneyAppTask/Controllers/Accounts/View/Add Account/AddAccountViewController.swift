@@ -87,8 +87,13 @@ class AddAccountViewController: UIViewController {
     }
     
     @IBAction func saveNewAccount(_ sender: Any) {
+        LoadingIndicatorView.show("Loading")
+
         guard let paramter = addAccountViewModel?.parseDataFromView() else {return}
         addAccountViewModel?.addAccountData(withParamter: paramter , Andcompletion: { [weak self] loadData, error in
+            DispatchQueue.main.async {
+                LoadingIndicatorView.hide()
+            }
             if loadData {
                 DispatchQueue.main.async {
                     self?.paaData?()

@@ -94,7 +94,11 @@ class AuthenticationViewController: UIViewController {
             return
         }
         
+        LoadingIndicatorView.show("Loading")
         oAuthLogin { [weak self] (oAuthToken: String?, error: Error?) in
+            DispatchQueue.main.async {
+                LoadingIndicatorView.hide()
+            }
             
             if let token = oAuthToken {
                 self?.saveData.saveAccessToken(token)

@@ -51,7 +51,12 @@ class PayeesViewController: UIViewController {
     
     // MARK:- get data from server
     private func getData(){
+        LoadingIndicatorView.show("Loading")
+
         payeesViewModel?.getData(completion: { [weak self] loadData ,error in
+            DispatchQueue.main.async {
+                LoadingIndicatorView.hide()
+            }
             if loadData {
                 DispatchQueue.main.async {
                     self?.payessTableView.reloadData()
