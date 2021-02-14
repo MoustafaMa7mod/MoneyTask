@@ -39,8 +39,6 @@ class PayeesViewController: UIViewController {
 
     }
     
-    // MARK: - actions
-
 
     // MARK:- setup setting of table view
     private func setupTableView(){

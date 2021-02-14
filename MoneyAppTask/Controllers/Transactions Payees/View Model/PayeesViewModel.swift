@@ -44,10 +44,5 @@ class PayeesViewModel: NSObject {
         
         return object
     }
-    
-    
-    
-    
-    
 }
 

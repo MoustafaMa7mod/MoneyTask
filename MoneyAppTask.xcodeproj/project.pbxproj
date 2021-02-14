@@ -62,6 +62,13 @@
 		23FCDF2425D841F40055BF89 /* PayeesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF2225D841F40055BF89 /* PayeesCell.swift */; };
 		23FCDF2525D841F40055BF89 /* PayeesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FCDF2325D841F40055BF89 /* PayeesCell.xib */; };
 		23FCDF2B25D8488D0055BF89 /* PayeesViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF2A25D8488D0055BF89 /* PayeesViewControllerTest.swift */; };
+		23FCDF2F25D9261C0055BF89 /* PayeeTransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF2E25D9261B0055BF89 /* PayeeTransactionsModel.swift */; };
+		23FCDF3425D927DC0055BF89 /* PayeeTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF3325D927DC0055BF89 /* PayeeTransactionsViewController.swift */; };
+		23FCDF3A25D928A90055BF89 /* PayeeTransactionsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF3925D928A90055BF89 /* PayeeTransactionsVC+TableView.swift */; };
+		23FCDF4025D9291A0055BF89 /* PayeeTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF3E25D9291A0055BF89 /* PayeeTransactionsCell.swift */; };
+		23FCDF4125D9291A0055BF89 /* PayeeTransactionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FCDF3F25D9291A0055BF89 /* PayeeTransactionsCell.xib */; };
+		23FCDF4725D92A7A0055BF89 /* PayeeTransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4625D92A7A0055BF89 /* PayeeTransactionsViewModel.swift */; };
+		23FCDF4B25D92B460055BF89 /* Networking+PayeeTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4A25D92B460055BF89 /* Networking+PayeeTransactions.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -139,6 +146,13 @@
 		23FCDF2225D841F40055BF89 /* PayeesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesCell.swift; sourceTree = "<group>"; };
 		23FCDF2325D841F40055BF89 /* PayeesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayeesCell.xib; sourceTree = "<group>"; };
 		23FCDF2A25D8488D0055BF89 /* PayeesViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesViewControllerTest.swift; sourceTree = "<group>"; };
+		23FCDF2E25D9261B0055BF89 /* PayeeTransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsModel.swift; sourceTree = "<group>"; };
+		23FCDF3325D927DC0055BF89 /* PayeeTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsViewController.swift; sourceTree = "<group>"; };
+		23FCDF3925D928A90055BF89 /* PayeeTransactionsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PayeeTransactionsVC+TableView.swift"; sourceTree = "<group>"; };
+		23FCDF3E25D9291A0055BF89 /* PayeeTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsCell.swift; sourceTree = "<group>"; };
+		23FCDF3F25D9291A0055BF89 /* PayeeTransactionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayeeTransactionsCell.xib; sourceTree = "<group>"; };
+		23FCDF4625D92A7A0055BF89 /* PayeeTransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsViewModel.swift; sourceTree = "<group>"; };
+		23FCDF4A25D92B460055BF89 /* Networking+PayeeTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+PayeeTransactions.swift"; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +189,7 @@
 				23420D8425D4523C00736F21 /* Networking+Budgets.swift */,
 				23420DCE25D6CBB300736F21 /* Networking+Accounts.swift */,
 				23FCDF1D25D83D630055BF89 /* Networking+Payees.swift */,
+				23FCDF4A25D92B460055BF89 /* Networking+PayeeTransactions.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -485,6 +500,7 @@
 			children = (
 				23FCDF0625D838990055BF89 /* TransactionPayees.storyboard */,
 				23FCDF0A25D838B50055BF89 /* Payees */,
+				23FCDF3225D927BB0055BF89 /* Payee Transactions */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				23FCDF1525D83C1D0055BF89 /* PayeesViewModel.swift */,
+				23FCDF4625D92A7A0055BF89 /* PayeeTransactionsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -501,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				23FCDF1925D83C2D0055BF89 /* PayeesModel.swift */,
+				23FCDF2E25D9261B0055BF89 /* PayeeTransactionsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -520,6 +538,25 @@
 			children = (
 				23FCDF2225D841F40055BF89 /* PayeesCell.swift */,
 				23FCDF2325D841F40055BF89 /* PayeesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		23FCDF3225D927BB0055BF89 /* Payee Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				23FCDF3D25D928FF0055BF89 /* Cell */,
+				23FCDF3325D927DC0055BF89 /* PayeeTransactionsViewController.swift */,
+				23FCDF3925D928A90055BF89 /* PayeeTransactionsVC+TableView.swift */,
+			);
+			path = "Payee Transactions";
+			sourceTree = "<group>";
+		};
+		23FCDF3D25D928FF0055BF89 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23FCDF3E25D9291A0055BF89 /* PayeeTransactionsCell.swift */,
+				23FCDF3F25D9291A0055BF89 /* PayeeTransactionsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -637,6 +674,7 @@
 				23FCDF0725D838990055BF89 /* TransactionPayees.storyboard in Resources */,
 				23CFDAD025D2F1FD00387BE9 /* Assets.xcassets in Resources */,
 				23420DF625D6E39E00736F21 /* AccountCell.xib in Resources */,
+				23FCDF4125D9291A0055BF89 /* PayeeTransactionsCell.xib in Resources */,
 				23CFDACE25D2F1FB00387BE9 /* Authentication.storyboard in Resources */,
 				23FCDF2525D841F40055BF89 /* PayeesCell.xib in Resources */,
 				23FCDEDD25D7F5310055BF89 /* AccountTypeCell.xib in Resources */,
@@ -723,6 +761,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FCDF1A25D83C2D0055BF89 /* PayeesModel.swift in Sources */,
+				23FCDF2F25D9261C0055BF89 /* PayeeTransactionsModel.swift in Sources */,
+				23FCDF3425D927DC0055BF89 /* PayeeTransactionsViewController.swift in Sources */,
 				23CFDACB25D2F1FB00387BE9 /* AuthenticationViewController.swift in Sources */,
 				23FCDECC25D7EE710055BF89 /* AccountTypesViewController.swift in Sources */,
 				23420D7D25D444C200736F21 /* URLS.swift in Sources */,
@@ -730,9 +770,13 @@
 				23A9F1D725D33E7100272CB8 /* Colors.swift in Sources */,
 				23FCDF1625D83C1D0055BF89 /* PayeesViewModel.swift in Sources */,
 				23FCDF0C25D838EC0055BF89 /* PayeesViewController.swift in Sources */,
+				23FCDF4725D92A7A0055BF89 /* PayeeTransactionsViewModel.swift in Sources */,
+				23FCDF3A25D928A90055BF89 /* PayeeTransactionsVC+TableView.swift in Sources */,
 				23420DEF25D6D65F00736F21 /* AccountsViewModel.swift in Sources */,
+				23FCDF4B25D92B460055BF89 /* Networking+PayeeTransactions.swift in Sources */,
 				23420D8525D4523C00736F21 /* Networking+Budgets.swift in Sources */,
 				23420DE525D6CE8100736F21 /* BudgetsVC+TableView.swift in Sources */,
+				23FCDF4025D9291A0055BF89 /* PayeeTransactionsCell.swift in Sources */,
 				23FCDF2425D841F40055BF89 /* PayeesCell.swift in Sources */,
 				23CFDAC725D2F1FB00387BE9 /* AppDelegate.swift in Sources */,
 				23FCDF1025D8392A0055BF89 /* PayeesVC+TableView.swift in Sources */,

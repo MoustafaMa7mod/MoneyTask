@@ -27,7 +27,14 @@ extension PayeesViewController: UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Mostafa")
+        let budget = payeesViewModel?.budgetObject
+        let payees = payeesViewModel?.getDetailsOfEachpayees(indexPath.row)
+
+        let payeeTransactionsViewController = PayeeTransactionsViewController.instantiateViewController()
+        payeeTransactionsViewController.budgetObject = budget
+        payeeTransactionsViewController.payeesObject = payees
+        self.navigationController?.pushViewController(payeeTransactionsViewController, animated: true)
+
     }
 
     

@@ -43,6 +43,40 @@
             </objects>
             <point key="canvasLocation" x="-326" y="104"/>
         </scene>
+        <!--Payee Transactions View Controller-->
+        <scene sceneID="t4R-4z-RSx">
+            <objects>
+                <viewController storyboardIdentifier="PayeeTransactionsViewController" id="VuR-KC-f0s" customClass="PayeeTransactionsViewController" customModule="MoneyAppTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FaQ-CG-Kgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-NJ-ev6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VuR-KC-f0s" id="rbM-RS-yXR"/>
+                                    <outlet property="delegate" destination="VuR-KC-f0s" id="J0b-dt-L7U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="21q-vO-xXY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ex2-NJ-ev6" secondAttribute="bottom" id="DwP-ky-qPC"/>
+                            <constraint firstItem="21q-vO-xXY" firstAttribute="trailing" secondItem="ex2-NJ-ev6" secondAttribute="trailing" id="Jri-hK-UCH"/>
+                            <constraint firstItem="ex2-NJ-ev6" firstAttribute="top" secondItem="FaQ-CG-Kgi" secondAttribute="top" id="eWo-ND-8Yv"/>
+                            <constraint firstItem="ex2-NJ-ev6" firstAttribute="leading" secondItem="FaQ-CG-Kgi" secondAttribute="leading" id="fAd-Ry-sfJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="payeeTransactionsTableView" destination="ex2-NJ-ev6" id="mbL-nB-c7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibg-cD-jFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="109"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
