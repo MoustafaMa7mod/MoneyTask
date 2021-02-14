@@ -17,38 +17,23 @@ class AccountTypesViewModel: NSObject {
     func getNumberOfsection() -> Int{
         return accountTypeSection.count
     }
-    
-    func getCountOfBudgetSection() -> Int{
-        return accountTypeBubgetSection.count
-    }
-    
-    func getCountOfTrackingSection() -> Int{
-        return accountTypeTrackingSection.count
-    }
-    
-    
-    
-    
-    func getItemOfBudgetSection(_ index: Int) -> String{
-        return accountTypeBubgetSection[index].key
-    }
-    func getItemOfTrackingSection(_ index: Int) -> String{
-        return accountTypeTrackingSection[index].key
-    }
-    
-    func getItemOfBudgetSectionValue(_ index: Int) -> String{
-        return accountTypeBubgetSection[index].value
-    }
-    func getItemOfTrackingSectionValue(_ index: Int) -> String{
-        return accountTypeTrackingSection[index].value
-    }
-
-    
-    
     func getSectionTitleHeader(_ index: Int) -> String{
         return accountTypeSection[index]
     }
+    
+    func getCountOfEachSection(_ section: Int) -> Int{
+        if section == 0 {
+            return accountTypeBubgetSection.count
+        }else{
+            return accountTypeTrackingSection.count
+        }
+    }
 
-    
-    
+    func getItemOfEachSection( _ section: Int ,  _ index: Int) -> (key: String, value: String){
+        if section == 0 {
+            return accountTypeBubgetSection[index]
+        }else{
+            return accountTypeTrackingSection[index]
+        }
+    }
 }

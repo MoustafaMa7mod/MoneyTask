@@ -12,40 +12,25 @@ extension AccountTypesViewController: UITableViewDataSource , UITableViewDelegat
     func numberOfSections(in tableView: UITableView) -> Int {
         return accountTypesViewModel.getNumberOfsection()
     }
-
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return accountTypesViewModel.getSectionTitleHeader(section)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return accountTypesViewModel.getCountOfBudgetSection()
-        }else{
-            return accountTypesViewModel.getCountOfTrackingSection()
-        }
+        return accountTypesViewModel.getCountOfEachSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = accountTypeTableView.dequeue() as AccountTypeCell
-        var type = String()
-        if indexPath.section == 0{
-            type = accountTypesViewModel.getItemOfBudgetSection(indexPath.row)
-            cell.configCell(type)
-        }else{
-            type = accountTypesViewModel.getItemOfTrackingSection(indexPath.row)
-            cell.configCell(type)
-
-        }
-        
+        let accountType = accountTypesViewModel.getItemOfEachSection(indexPath.section, indexPath.row).key
+        cell.configCell(accountType)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0{
-            self.passData?(accountTypesViewModel.getItemOfBudgetSection(indexPath.row) , accountTypesViewModel.getItemOfBudgetSectionValue(indexPath.row))
-        }else{
-            self.passData?(accountTypesViewModel.getItemOfTrackingSection(indexPath.row) , accountTypesViewModel.getItemOfTrackingSectionValue(indexPath.row))
-        }
+        let accountType = accountTypesViewModel.getItemOfEachSection(indexPath.section, indexPath.row)
+        self.passData?(accountType.key , accountType.value)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -56,7 +41,7 @@ extension AccountTypesViewController: UITableViewDataSource , UITableViewDelegat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-
+    
     
     
     
