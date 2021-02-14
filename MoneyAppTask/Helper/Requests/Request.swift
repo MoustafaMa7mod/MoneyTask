@@ -54,7 +54,12 @@ class Request: NSObject {
     }
     
     func request(_ url: URL, completion: @escaping (Data?, ErrorDetailsObject?) -> Void) {
-        
+        let isNetworkAviaible = Networking.isConnectedToInternet
+        guard isNetworkAviaible == true else {
+            completion(nil , ErrorDetailsObject(id: "001", name: "Internet Error", detail: "no internet connection!") )
+            return
+        }
+
         let task = session.dataTask(with: configURLRequest(url)) { data, response, error in
             guard error == nil , let response = response as? HTTPURLResponse else {
                 completion(nil , ErrorDetailsObject(id: "000", name: "Unknown", detail: "Something went wrong!") )

@@ -72,6 +72,7 @@
 		23FCDF4F25D932B80055BF89 /* PayeeTransactionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF4E25D932B80055BF89 /* PayeeTransactionsTest.swift */; };
 		23FCDF5325D93A9A0055BF89 /* ErrorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF5225D93A9A0055BF89 /* ErrorDetailsModel.swift */; };
 		23FCDF5925D93D810055BF89 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF5825D93D810055BF89 /* UIViewController.swift */; };
+		23FCDF5E25D946EA0055BF89 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCDF5D25D946EA0055BF89 /* Reachability.swift */; };
 		3EE7DC431E798D54CEA5D1F4 /* Pods_MoneyAppTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B89E3CB9CE0513CB5B2BE /* Pods_MoneyAppTaskTests.framework */; };
 		84AACD3D5FC528962E6248D4 /* Pods_MoneyAppTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */; };
 /* End PBXBuildFile section */
@@ -159,6 +160,7 @@
 		23FCDF4E25D932B80055BF89 /* PayeeTransactionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeTransactionsTest.swift; sourceTree = "<group>"; };
 		23FCDF5225D93A9A0055BF89 /* ErrorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailsModel.swift; sourceTree = "<group>"; };
 		23FCDF5825D93D810055BF89 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		23FCDF5D25D946EA0055BF89 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5CD9CFC8D9B95985041419C8 /* Pods-MoneyAppTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.debug.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.debug.xcconfig"; sourceTree = "<group>"; };
 		64108608CEDF0664FA72B183 /* Pods-MoneyAppTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyAppTask.release.xcconfig"; path = "Target Support Files/Pods-MoneyAppTask/Pods-MoneyAppTask.release.xcconfig"; sourceTree = "<group>"; };
 		8BD251FAC78D234AD10BACB0 /* Pods_MoneyAppTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyAppTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +422,7 @@
 		23CFDAFB25D3057C00387BE9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				23FCDF5C25D946D70055BF89 /* Reachability */,
 				23420D8825D4528200736F21 /* Networks */,
 				23B2353225D413C5000B983F /* Requests */,
 				23A9F19F25D3325400272CB8 /* Main Classes */,
@@ -568,6 +571,14 @@
 				23FCDF3F25D9291A0055BF89 /* PayeeTransactionsCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		23FCDF5C25D946D70055BF89 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				23FCDF5D25D946EA0055BF89 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		D10AD707F6EB0BC0EB64DECF /* Pods */ = {
@@ -807,6 +818,7 @@
 				23FCDEC025D70BA80055BF89 /* AddAccountViewModel.swift in Sources */,
 				23B2352B25D40BB3000B983F /* BudgetModel.swift in Sources */,
 				23A9F1A125D3326900272CB8 /* SaveData.swift in Sources */,
+				23FCDF5E25D946EA0055BF89 /* Reachability.swift in Sources */,
 				23420DF525D6E39E00736F21 /* AccountCell.swift in Sources */,
 				23420DEB25D6D27100736F21 /* AccountModel.swift in Sources */,
 				23B2352025D40290000B983F /* BudgetCell.swift in Sources */,

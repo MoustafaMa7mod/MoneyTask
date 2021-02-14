@@ -88,6 +88,12 @@ class AuthenticationViewController: UIViewController {
   
     // MARK - Actions
     @IBAction func rigesterButtonTapped(_ sender: Any) {
+        let isNetworkAviaible = Networking.isConnectedToInternet
+        guard isNetworkAviaible == true else {
+            self.showErrorAlert("Alert Internet Error", "no internet connection!")
+            return
+        }
+        
         oAuthLogin { [weak self] (oAuthToken: String?, error: Error?) in
             
             if let token = oAuthToken {
@@ -97,8 +103,11 @@ class AuthenticationViewController: UIViewController {
             }
             if let error = error {
                 print("Error: \(error.localizedDescription)")
+                self?.showErrorAlert("Alert Error", error.localizedDescription)
             } else {
                 print("Unknown error")
+                self?.showErrorAlert("Alert Error", "Unknown error")
+
             }
         }
     }

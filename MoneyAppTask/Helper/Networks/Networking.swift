@@ -12,7 +12,9 @@ class Networking: NSObject {
     static let shared = Networking()
     var request: Request?
     var accessToken = String()
-    
+    let reachability = Reachability()!
+    static var isConnectedToInternet:Bool?
+
     override init() {
         accessToken = SaveData.shared.getAccessToken()
     }
@@ -27,4 +29,30 @@ class Networking: NSObject {
             return nil
         }
     }
+    
+    @objc func checkInternetConnection(){
+        reachability.whenReachable = { reachability in
+            Networking.isConnectedToInternet = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "internet"), object: self, userInfo: ["isConnected": true])
+            if reachability.connection == .wifi {
+                print("Reachable via WiFi")
+            } else {
+                print("Reachable via cellular")
+            }
+        }
+        reachability.whenUnreachable = { _ in
+            print("[network] Not reachable")
+            Networking.isConnectedToInternet = false
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "internet"), object: self, userInfo: ["isConnected": false])
+            print("not internet")
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    
+    
+    
 }
